@@ -7,7 +7,7 @@ include ../latex/make.bookvars
 #ONCEFLAGS := -justonce
 
 SOURCE_DIRS += appendix
-FIGURES := ../../figures/$(THISBOOK)
+FIGURES := ../figures/ece1236-microwaves
 SOURCE_DIRS += $(FIGURES)
 
 # also toggle redacted classicthesis-config.tex
@@ -26,9 +26,9 @@ THISBOOK_DEPS += $(PDFS_FROM_EPS)
 
 include ../latex/make.rules
 
-julia.tex : ../../julia/METADATA
-mathematica.tex : ../../mathematica/METADATA
-matlab.tex : ../../matlab/METADATA
+julia.tex : $(HOME)/physicsplay/julia/METADATA
+mathematica.tex : $(HOME)/physicsplay/mathematica/METADATA
+matlab.tex : $(HOME)/physicsplay/matlab/METADATA
 
 #uwaves4TransmissionLines.pdf : ../ece1236/uwaves4TransmissionLinesCore.tex
 #uwavesDeck5SmithChart.pdf :: ../ece1236/uwavesDeck5SmithChartCore.tex
