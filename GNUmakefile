@@ -1,5 +1,6 @@
 THISDIR := ece1236-microwaves
 THISBOOK := ece1236
+BASEVER := a2ac9ac
 
 include ../latex/make.bookvars
 
