@@ -7,7 +7,7 @@
 \index{transmission line}
 A transmission line requires two conductors as sketched in \cref{fig:deck4Txline:deck4TxlineFig1}, which shows a 2-wire line such a telephone line, a coaxial cable as found in cable TV distribution, and a microstrip line as found in cell phone RF interconnects.
 
-\imageFigure{../../figures/ece1236/deck4TxlineFig1}{Transmission line examples.}{fig:deck4Txline:deck4TxlineFig1}{0.2}
+\imageFigure{../figures/ece1236-microwaves/deck4TxlineFig1}{Transmission line examples.}{fig:deck4Txline:deck4TxlineFig1}{0.2}
 
 A two-wire line becomes a transmission line when the wavelength of operation becomes comparable to the size of the line (or higher spectral component for pulses).  In general a transmission line much support (TEM) transverse electromagnetic modes.
 
@@ -16,7 +16,7 @@ A two-wire line becomes a transmission line when the wavelength of operation bec
 
 In \cref{fig:deck4Txline:deck4TxlineFig2}, an electronic representation of a transmission line circuit is sketched.
 
-\imageFigure{../../figures/ece1236/deck4TxlineFig2}{Transmission line equivalent circuit.}{fig:deck4Txline:deck4TxlineFig2}{0.2}
+\imageFigure{../figures/ece1236-microwaves/deck4TxlineFig2}{Transmission line equivalent circuit.}{fig:deck4Txline:deck4TxlineFig2}{0.2}
 
 In this circuit all the elements have per-unit length units.  With \( I = C dV/dt \sim j \omega C V \), \( v = I R \), and \( V = L dI/dt \sim j \omega L I \), the KVL equation is
 
@@ -146,7 +146,7 @@ I_0^{-} &= \frac{V_0^{-}}{Z_0}.
 
 From electrostatics and magnetostatics the per unit length induction and capacitance constants for a co-axial cable can be calculated.    For the cylindrical configuration sketched in \cref{fig:deck4Txline:deck4TxlineFig3}
 
-\imageFigure{../../figures/ece1236/deck4TxlineFig3}{Coaxial cable.}{fig:deck4Txline:deck4TxlineFig3}{0.2}
+\imageFigure{../figures/ece1236-microwaves/deck4TxlineFig3}{Coaxial cable.}{fig:deck4Txline:deck4TxlineFig3}{0.2}
 
 From Gauss' law the total charge can be calculated assuming that the ends of the cable can be neglected
 
@@ -166,7 +166,7 @@ E =
 
 which must be a radial field as sketched in \cref{fig:deck4Txline:deck4TxlineFig4}.
 
-\imageFigure{../../figures/ece1236/deck4TxlineFig4}{Radial electric field for coaxial cable.}{fig:deck4Txline:deck4TxlineFig4}{0.2}
+\imageFigure{../figures/ece1236-microwaves/deck4TxlineFig4}{Radial electric field for coaxial cable.}{fig:deck4Txline:deck4TxlineFig4}{0.2}
 
 The potential difference from the inner transmission surface to the outer is
 
@@ -221,7 +221,7 @@ L = \frac{\Phi/l}{I} = \frac{\mu_0}{ 2 \pi } \ln \frac{b}{a}.
 \end{equation}
 
 %\cref{fig:deck4Txline:deck4TxlineFig5}.
-%\imageFigure{../../figures/ece1236/deck4TxlineFig5}{CAPTION: deck4TxlineFig5}{fig:deck4Txline:deck4TxlineFig5}{0.2}
+%\imageFigure{../figures/ece1236-microwaves/deck4TxlineFig5}{CAPTION: deck4TxlineFig5}{fig:deck4Txline:deck4TxlineFig5}{0.2}
 
 For a lossless line where \( R = G = 0 \), we have \( \gamma = \sqrt{ (j \omega L)(j \omega C)} = j \omega \sqrt{L C} \),
 so the phase velocity for a (lossless) coaxial cable is
@@ -319,7 +319,7 @@ v(z, t)
 
 In this case the shape and amplitude of the waveform are preserved as sketched in \cref{fig:deck4Txline:deck4TxlineFig7}.
 
-\imageFigure{../../figures/ece1236/deck4TxlineFig7}{Lossless line signal preservation.}{fig:deck4Txline:deck4TxlineFig7}{0.2}
+\imageFigure{../figures/ece1236-microwaves/deck4TxlineFig7}{Lossless line signal preservation.}{fig:deck4Txline:deck4TxlineFig7}{0.2}
 
 \section{Low loss line.}
 \index{low loss line}
@@ -404,7 +404,7 @@ The phase factor can be written
 
 so the signal still moves with the phase velocity \( v_\phi = 1/\sqrt{LC} \), but in a diminishing envelope as sketched in \cref{fig:deck4Txline:deck4TxlineFig8}.
 
-\imageFigure{../../figures/ece1236/deck4TxlineFig8}{Time domain envelope for loss loss line.}{fig:deck4Txline:deck4TxlineFig8}{0.2}
+\imageFigure{../figures/ece1236-microwaves/deck4TxlineFig8}{Time domain envelope for loss loss line.}{fig:deck4Txline:deck4TxlineFig8}{0.2}
 
 Notes
 
@@ -462,7 +462,7 @@ v_\phi = \frac{\omega}{\beta} = \inv{\sqrt{L C}}.
 
 Consider the load configuration sketched in \cref{fig:deck4Txline:deck4TxlineFig9}.
 
-\imageFigure{../../figures/ece1236/deck4TxlineFig9}{Terminated line.}{fig:deck4Txline:deck4TxlineFig9}{0.2}
+\imageFigure{../figures/ece1236-microwaves/deck4TxlineFig9}{Terminated line.}{fig:deck4Txline:deck4TxlineFig9}{0.2}
 
 Recall that
 
@@ -638,7 +638,7 @@ which occurs when \( \Theta_\txtL - 2 \beta l = (2 k - 1 )\pi \) for \( k = 1, 2
 
 This is a measure of the mismatch of a line.  This is sketched in \cref{fig:deck4Txline:deck4TxlineFig10}.
 
-\imageFigure{../../figures/ece1236/deck4TxlineFig10}{SWR extremes.}{fig:deck4Txline:deck4TxlineFig10}{0.2}
+\imageFigure{../figures/ece1236-microwaves/deck4TxlineFig10}{SWR extremes.}{fig:deck4Txline:deck4TxlineFig10}{0.2}
 
 Notes:
 
@@ -685,7 +685,7 @@ The distance between two consecutive maxima (or minima) of the SWR is \( \lambda
 
 Referring to \cref{fig:deck4Txline:deck4TxlineFig11}, let's solve for the impedance at the load where \( z = 0 \) and at \( z = -l \).
 
-\imageFigure{../../figures/ece1236/deck4TxlineFig11}{Configuration for impedance transformation.}{fig:deck4Txline:deck4TxlineFig11}{0.2}
+\imageFigure{../figures/ece1236-microwaves/deck4TxlineFig11}{Configuration for impedance transformation.}{fig:deck4Txline:deck4TxlineFig11}{0.2}
 
 At any point on the line we have
 
@@ -754,5 +754,5 @@ Z_{\textrm{in}} =
 \index{reflection coefficient}
 This can be thought of as providing a reflection coefficient function along the line to the load at any point as sketched in \cref{fig:deck4Txline:deck4TxlineFig12}.
 
-\imageFigure{../../figures/ece1236/deck4TxlineFig12}{Impedance transformation reflection on the line.}{fig:deck4Txline:deck4TxlineFig12}{0.2}
+\imageFigure{../figures/ece1236-microwaves/deck4TxlineFig12}{Impedance transformation reflection on the line.}{fig:deck4Txline:deck4TxlineFig12}{0.2}
 

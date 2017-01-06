@@ -7,24 +7,24 @@
 
 Using a transformation of the form \cref{fig:deck7:deck7Fig1} it is possible to optimize for maximum power delivery, using for example a matching transformation \( Z_{\textrm{in}} = Z_1^2/R_\txtL = Z_0\), or \( Z_1 = \sqrt{R_\txtL Z_0} \).  Unfortunately, such a transformation does not allow any control over the bandwidth.  This results in a pinched frequency response for which the standard solution is to add more steps as sketched in \cref{fig:Feb10:Feb10Fig2}.
 
-\imageFigure{../../figures/ece1236/Feb10Fig2}{Pinched frequency response.}{fig:Feb10:Feb10Fig2}{0.2}
+\imageFigure{../figures/ece1236-microwaves/Feb10Fig2}{Pinched frequency response.}{fig:Feb10:Feb10Fig2}{0.2}
 
 %The standard solution is to add more steps.
 % as sketched in \cref{fig:deck7:deck7Fig2}.
 
 % \imageTwoFigures{path1}{path2}{fancy plots}{fig:blah}{scale=0.3}
-\imageTwoFigures{../../figures/ece1236/deck7Fig1}{../../figures/ece1236/deck7Fig2}{Single and multiple stage impedance matching.}{fig:deck7:deck7Fig1}{scale=0.3}
-%\imageFigure{../../figures/ece1236/deck7Fig2}{Multiple step impedance matching.}{fig:deck7:deck7Fig2}{0.15}
+\imageTwoFigures{../figures/ece1236-microwaves/deck7Fig1}{../figures/ece1236-microwaves/deck7Fig2}{Single and multiple stage impedance matching.}{fig:deck7:deck7Fig1}{scale=0.3}
+%\imageFigure{../figures/ece1236-microwaves/deck7Fig2}{Multiple step impedance matching.}{fig:deck7:deck7Fig2}{0.15}
 
 This can be implemented in electronics, or potentially geometrically as in this sketch of a microwave stripline transformer implementation \cref{fig:deck7:deck7Fig3}.
 
-\imageFigure{../../figures/ece1236/deck7Fig3}{Stripline implementation of staged impedance matching.}{fig:deck7:deck7Fig3}{0.15}
+\imageFigure{../figures/ece1236-microwaves/deck7Fig3}{Stripline implementation of staged impedance matching.}{fig:deck7:deck7Fig3}{0.15}
 
 To find a multistep transformation algebraically can be hard, but it is easy to do on a Smith chart.  The rule of thumb is that we want to stay near the center of the chart with each transformation.
 
 There is however, a closed form method of calculating a specific sort of multisection transformation that is algebraically tractable.  That method uses a chain of \( \lambda/4 \) transformers to increase the bandwidth as sketched in \cref{fig:deck7:deck7Fig4}.
 
-\imageFigure{../../figures/ece1236/deck7Fig4}{Multiple \( \lambda/4 \) transformers.}{fig:deck7:deck7Fig4}{0.2}
+\imageFigure{../figures/ece1236-microwaves/deck7Fig4}{Multiple \( \lambda/4 \) transformers.}{fig:deck7:deck7Fig4}{0.2}
 
 The total reflection coefficient can be approximated to first order by summing the reflections at each stage (without considering there may be other internal reflections of transmitted field components).  Algebraically that is
 
@@ -43,7 +43,7 @@ where
 
 Why?  Consider reflections at the Z_1, Z_2 interface as sketched in \cref{fig:deck7:deck7Fig5}.
 
-\imageFigure{../../figures/ece1236/deck7Fig5}{Single stage of multiple \( \lambda/4\) transformers.}{fig:deck7:deck7Fig5}{0.15}
+\imageFigure{../figures/ece1236-microwaves/deck7Fig5}{Single stage of multiple \( \lambda/4\) transformers.}{fig:deck7:deck7Fig5}{0.15}
 
 Assuming small reflections, where \( \Abs{\Gamma} \ll 1 \) then \( T = 1 + \Gamma \approx 1 \).  Here
 
@@ -66,7 +66,7 @@ Let
 \end{equation}
 
 This type of a response is maximally flat, and is plotted in \cref{fig:multitransformer:multitransformerFig1}.
-\imageFigure{../../figures/ece1236/multitransformerFig1}{Binomial transformer.}{fig:multitransformer:multitransformerFig1}{0.25}
+\imageFigure{../figures/ece1236-microwaves/multitransformerFig1}{Binomial transformer.}{fig:multitransformer:multitransformerFig1}{0.25}
 
 The absolute value of the reflection coefficient is
 
@@ -198,7 +198,7 @@ Regardless of whether or not that last approximation is used, one can proceed it
 
 To evaluate the bandwidth, let \( \Gamma_{\mathrm{m}} \) be the maximum tolerable reflection coefficient over the passband, as sketched in \cref{fig:deck7:deck7Fig6}.
 
-\imageFigure{../../figures/ece1236/deck7Fig6}{Max tolerable reflection.}{fig:deck7:deck7Fig6}{0.2}
+\imageFigure{../figures/ece1236-microwaves/deck7Fig6}{Max tolerable reflection.}{fig:deck7:deck7Fig6}{0.2}
 
 That is
 
