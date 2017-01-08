@@ -1,6 +1,5 @@
 THISDIR := ece1236-microwaves
 THISBOOK := ece1236
-BASEVER := a2ac9ac
 
 include ../latex/make.bookvars
 
@@ -26,9 +25,9 @@ THISBOOK_DEPS += $(PDFS_FROM_EPS)
 
 include ../latex/make.rules
 
-julia.tex : $(HOME)/physicsplay/julia/METADATA
-mathematica.tex : $(HOME)/physicsplay/mathematica/METADATA
-matlab.tex : $(HOME)/physicsplay/matlab/METADATA
+julia.tex : ../julia/METADATA
+mathematica.tex : ../mathematica/METADATA
+matlab.tex : ../matlab/METADATA
 
 #uwaves4TransmissionLines.pdf : ../ece1236/uwaves4TransmissionLinesCore.tex
 #uwavesDeck5SmithChart.pdf :: ../ece1236/uwavesDeck5SmithChartCore.tex
@@ -36,8 +35,8 @@ matlab.tex : $(HOME)/physicsplay/matlab/METADATA
 
 #problemSets :: uwavesproblemSet1.pdf
 #
-#ps7mathematica.tex : ../METADATA ../../mathematica/METADATA
+#ps7mathematica.tex : ../METADATA ../mathematica/METADATA
 #	(cd .. ; ./METADATA -mathematica -latex -ece1236 -filter ece1236/ps7/ ) > $@
 #
-#ps8mathematica.tex : ../METADATA ../../mathematica/METADATA
+#ps8mathematica.tex : ../METADATA ../mathematica/METADATA
 #	(cd .. ; ./METADATA -mathematica -latex -ece1236 -filter ece1236/ps8/ ) > $@
