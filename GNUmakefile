@@ -1,10 +1,7 @@
 THISDIR := ece1236-microwaves
 THISBOOK := ece1236
 
-export BOOKSUBVER := 1
-export BOOKMAJVER := 0
-export REVISIONNUMBER := 9
-
+include make.revision
 include ../latex/make.bookvars
 
 #ONCEFLAGS := -justonce
@@ -12,10 +9,6 @@ include ../latex/make.bookvars
 SOURCE_DIRS += appendix
 FIGURES := ../figures/ece1236-microwaves
 SOURCE_DIRS += $(FIGURES)
-
-# also toggle redacted classicthesis-config.tex
-# FIXME: changing this flag should be a dependency of matlab.tex 
-#REDACTED := -redacted
 
 GENERATED_SOURCES += matlab.tex 
 GENERATED_SOURCES += mathematica.tex 
