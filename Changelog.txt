@@ -1,3 +1,4 @@
 ece1236.V0.1.10.pdf (in progress.)
 - switch to 6x9 format.
 - Add spellcheck rules.
+- thethe.py fixes.
