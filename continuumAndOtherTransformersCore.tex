@@ -20,13 +20,15 @@ A non-discrete impedance matching transformation, as sketched in \cref{fig:taper
 \Delta Z \rightarrow 0
 \end{equation}
 
-\begin{dmath}\label{eqn:continuumAndOtherTransformersCore:860}
+\begin{equation}\label{eqn:continuumAndOtherTransformersCore:860}
+\begin{aligned}
 d\Gamma
-= \frac{dZ}{2 Z}
-= \inv{2} \frac{d (\ln Z)}{dz}
-= \frac{Z_0}{Z} \frac{d (Z/Z_0)}{dz}
-= \frac{1}{Z} \frac{d Z}{dz}.
-\end{dmath}
+&= \frac{dZ}{2 Z}
+\\ &= \inv{2} \frac{d (\ln Z)}{dz}
+\\ &= \frac{Z_0}{Z} \frac{d (Z/Z_0)}{dz}
+\\ &= \frac{1}{Z} \frac{d Z}{dz}.
+\end{aligned}
+\end{equation}
 
 Hence as we did for multisection transformers, associate \( \Delta \Gamma \) with \( e^{- 2j \beta z} \) as sketched in \cref{fig:taperedLines:taperedLinesFig2}.
 
@@ -34,12 +36,14 @@ Hence as we did for multisection transformers, associate \( \Delta \Gamma \) wit
 
 assuming small reflections (i.e. \( Z(z) \) is a slowly varying (adiabatic).  Then
 
-\begin{dmath}\label{eqn:continuumAndOtherTransformersCore:920}
+\begin{equation}\label{eqn:continuumAndOtherTransformersCore:920}
+\begin{aligned}
 \Gamma(\omega)
-= \int_0^L e^{ -2 j \beta z} d\Gamma
-= \inv{2}
+&= \int_0^L e^{ -2 j \beta z} d\Gamma
+\\ &= \inv{2}
 \int_0^L e^{ -2 j \beta z}  \frac{d (\ln Z)}{dz} dz
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 This supplies the means to calculate the reflection coefficient for any impedance curve.  As with the step impedance matching process, it is assumed that only first order reflections are of interest.
 
@@ -80,23 +84,25 @@ Also
 
 Hence
 
-\begin{dmath}\label{eqn:continuumAndOtherTransformersCore:740}
+\begin{equation}\label{eqn:continuumAndOtherTransformersCore:740}
+\begin{aligned}
 \Gamma(\omega)
-= \inv{2} \int_0^L e^{-2 j \beta z} \frac{d}{dz} \ln \frac{Z_\txtL}{Z_0} dz
-= \frac{a}{2}
+&= \inv{2} \int_0^L e^{-2 j \beta z} \frac{d}{dz} \ln \frac{Z_\txtL}{Z_0} dz
+\\ &= \frac{a}{2}
 \int_0^L e^{-2 j \beta z} dz
-= \frac{1}{2L} \ln \frac{Z_\txtL}{Z_0}
+\\ &= \frac{1}{2L} \ln \frac{Z_\txtL}{Z_0}
 \evalrange{ \frac{e^{-2 j \beta z} }{ -2 j \beta} }{0}{L}
-= \frac{1}{2L \beta} \ln \frac{Z_\txtL}{Z_0}
+\\ &= \frac{1}{2L \beta} \ln \frac{Z_\txtL}{Z_0}
 \frac{ 1 - e^{-2 j \beta L} }{2 j}
-= \frac{1}{2} \ln \frac{Z_\txtL}{Z_0} e^{-j \beta L} \frac{\sin( \beta L )}{\beta L},
-\end{dmath}
+\\ &= \frac{1}{2} \ln \frac{Z_\txtL}{Z_0} e^{-j \beta L} \frac{\sin( \beta L )}{\beta L},
+\end{aligned}
+\end{equation}
 
 or
 
-\begin{dmath}\label{eqn:continuumAndOtherTransformersCore:940}
+\begin{equation}\label{eqn:continuumAndOtherTransformersCore:940}
 \Gamma(\omega) = \frac{1}{2} \ln \frac{Z_\txtL}{Z_0} e^{-j \beta L} \sinc( \beta L ).
-\end{dmath}
+\end{equation}
 
 \begin{enumerate}
 \item \( \beta \) is constant with \( Z \) varying: this is good only for TEM lines.
@@ -110,20 +116,20 @@ This is sketched in \cref{fig:taperedLines:taperedLinesFig3}.
 
 Want:
 
-\begin{dmath}\label{eqn:continuumAndOtherTransformersCore:760}
+\begin{equation}\label{eqn:continuumAndOtherTransformersCore:760}
 \beta L = \pi,
-\end{dmath}
+\end{equation}
 
 or
-\begin{dmath}\label{eqn:continuumAndOtherTransformersCore:780}
+\begin{equation}\label{eqn:continuumAndOtherTransformersCore:780}
 \frac{\omega_c}{v_\phi} L = \pi
-\end{dmath}
+\end{equation}
 
 where \( \omega_c \) is the cutoff frequency.  This gives
 
-\begin{dmath}\label{eqn:continuumAndOtherTransformersCore:800}
+\begin{equation}\label{eqn:continuumAndOtherTransformersCore:800}
 \omega_c = \frac{\pi v_\phi}{L}.
-\end{dmath}
+\end{equation}
 
 \paragraph{Triangular Taper}
 \index{triangular taper}
@@ -150,9 +156,9 @@ Z_0 e^{(4z/L - 2 z^2 - 1) \ln(Z_\txtL/Z_0)} & \quad \mbox{\( L/2 \le z \le L\)} 
 
 In this case
 
-\begin{dmath}\label{eqn:continuumAndOtherTransformersCore:1000}
+\begin{equation}\label{eqn:continuumAndOtherTransformersCore:1000}
 \Gamma(\omega) = \frac{1}{2} e^{-\beta L} \ln \frac{Z_\txtL}{Z_0} e^{-j \beta L} \sinc^2( \beta L/2 ).
-\end{dmath}
+\end{equation}
 
 Compared to the exponential taper \( \sinc( \beta L ) \) for the \( \beta L > 2 \pi \) the peaks of \( \Abs{\Gamma} \) are lower, but the first null occurs at \( \beta L = 2 \pi \) whereas for the exponential taper it occurs at \( \beta L = \pi \).  This is sketched in \cref{fig:taperedLines:taperedLinesFig4}.  The price to pay for this is that the zero is at \( 2 \pi \) so we have to make it twice as long to get the ripple down.
 

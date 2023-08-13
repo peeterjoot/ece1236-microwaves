@@ -15,51 +15,59 @@ Calculate the corresponding phase velocity, characteristic impedance and attenua
 
 The impedance of the line is
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem2:20}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem2:20}
 Z_0 = \sqrt{\frac{ R + j \omega L }{ G + j \omega C }},
-\end{dmath}
+\end{equation}
 
 we know \( R, C, G \), but not \( L \).  We'd found that
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem2:40}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem2:40}
 v_\phi = \inv{\sqrt{L C}},
-\end{dmath}
+\end{equation}
 
 for lossless, low-loss, and distortionless lines.  If we assume that is the case here too, and
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem2:60}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem2:60}
+\begin{aligned}
 v_\phi
-= \frac{c}{\sqrt{\epsilon_r}}
-= \frac{3 \times 10^8}{\sqrt{2.5}}
-= 1.9 \times 10^8 \,\si{m/s},
-\end{dmath}
+&= \frac{c}{\sqrt{\epsilon_r}}
+\\ &= \frac{3 \times 10^8}{\sqrt{2.5}}
+\\ &= 1.9 \times 10^8 \,\si{m/s},
+\end{aligned}
+\end{equation}
 
 we have
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem2:80}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem2:80}
+\begin{aligned}
 L
-= \inv{v_\phi^2 C}
-= \frac{1}{(1.9 \times 10^8)^2 (200 \times 10^{-12})} \,\si{H/m}
-= 14 \,\si{ n H/m }.
-\end{dmath}
+&= \inv{v_\phi^2 C}
+\\ &= \frac{1}{(1.9 \times 10^8)^2 (200 \times 10^{-12})} \,\si{H/m}
+\\ &= 14 \,\si{ n H/m }.
+\end{aligned}
+\end{equation}
 
 For frequencies in the \si{GHz} range are the low-loss conditions satisfied?  With \( G = 0 \), the condition \( G \ll \omega C \) is clearly true.  How about \( R \ll \omega L \)?  For \( f \) in \si{GHz} we have
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem2:300}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem2:300}
+\begin{aligned}
 \omega L
-= 2( 14 ) \pi f
-= 88 f.
-\end{dmath}
+&= 2( 14 ) \pi f
+\\ &= 88 f.
+\end{aligned}
+\end{equation}
 
 We have \( 2 < 88 f \), so the low-loss approximation is definitely valid for frequencies above 1 \si{GHz}.
 
 Without such approximations, our impedance expression is a bit of an ugly beast
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem2:100}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem2:100}
+\begin{aligned}
 Z_0
-= \sqrt{\frac{ R + j \omega L }{ G + j \omega C }}
-= \sqrt{\frac{ 2 + j \omega 14 \times 10^{-9} }{ j \omega 200 \times 10^{-12} }} \Omega.
-\end{dmath}
+&= \sqrt{\frac{ R + j \omega L }{ G + j \omega C }}
+\\ &= \sqrt{\frac{ 2 + j \omega 14 \times 10^{-9} }{ j \omega 200 \times 10^{-12} }} \Omega.
+\end{aligned}
+\end{equation}
 
 The low-loss approximation for the impedence, with \( R = 0 \), is
 
@@ -81,12 +89,14 @@ Z_0(10 \,\si{GHz}) &= 26.35 \phase{ \ang{-0.006566} } \\
 At all of these frequencies, the impedance matches the low-loss approximation.
 
 For the attenuation factor first note that
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem2:120}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem2:120}
+\begin{aligned}
 \gamma
-= \lr{ \lr{ 2 + j \omega 1.4 \times 10^{-9} } \lr{ j \omega 200 \times 10^{-12} } }^{1/2}
-= \lr{ \lr{ 2 + j 2 \pi f 1.4 } \lr{ j 0.4 \pi f } }^{1/2}
-= f \sqrt{ 0.4 \pi } \lr{ (2/f) j - 2.8 \pi }^{1/2},
-\end{dmath}
+&= \lr{ \lr{ 2 + j \omega 1.4 \times 10^{-9} } \lr{ j \omega 200 \times 10^{-12} } }^{1/2}
+\\ &= \lr{ \lr{ 2 + j 2 \pi f 1.4 } \lr{ j 0.4 \pi f } }^{1/2}
+\\ &= f \sqrt{ 0.4 \pi } \lr{ (2/f) j - 2.8 \pi }^{1/2},
+\end{aligned}
+\end{equation}
 
 where \( f \) is in \si{GHz}.  We see that for \( f \in [1, 10] \), this \( \gamma \) is close to purely imaginary, as is also the case for \( R = 0 \).  Specifically
 

@@ -36,11 +36,13 @@ Determine the load \( Z_\txtL \).
 Because the current has a different sign in the superposition sum, the current min/max will be where there is a voltage max/min, so the first minimum is at \( d = 9.7 \si{mm} \).
 
 Showing this explicitly, the current amplitude is
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem3:180}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem3:180}
+\begin{aligned}
 \Abs{I(-l)}
-= \Abs{ \frac{V_0^{+}}{Z_0} } \Abs{ e^{-j\beta(-l)} - \Gamma_\txtL e^{j\beta(-l)} }
-= \Abs{ \frac{V_0^{+}}{Z_0} } \Abs{ 1 - \Abs{\Gamma_\txtL} e^{ j \Theta_\txtL - 2 j \beta l } }.
-\end{dmath}
+&= \Abs{ \frac{V_0^{+}}{Z_0} } \Abs{ e^{-j\beta(-l)} - \Gamma_\txtL e^{j\beta(-l)} }
+\\ &= \Abs{ \frac{V_0^{+}}{Z_0} } \Abs{ 1 - \Abs{\Gamma_\txtL} e^{ j \Theta_\txtL - 2 j \beta l } }.
+\end{aligned}
+\end{equation}
 
 The current minimum and maximums are respectively
 \begin{equation}\label{eqn:uwavesproblemSet1Problem3:200}
@@ -69,75 +71,83 @@ v_\phi = c = \inv{\sqrt{L C}}.
 
 The VSWR is
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem3:60}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem3:60}
+\begin{aligned}
 V_{\textrm{SWR}}
-= \frac{V_{\mathrm{max}}}{V_{\mathrm{min}}}
-= \frac
+&= \frac{V_{\mathrm{max}}}{V_{\mathrm{min}}}
+\\ &= \frac
 {1 + \Abs{\Gamma_\txtL}}
 {1 - \Abs{\Gamma_\txtL}}
-= 2.33,
-\end{dmath}
+\\ &= 2.33,
+\end{aligned}
+\end{equation}
 
 so
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem3:80}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem3:80}
 1 + \Abs{\Gamma_\txtL}
 =
 \lr{1 - \Abs{\Gamma_\txtL}} V_{\textrm{SWR}}
-\end{dmath}
+\end{equation}
 
 or
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem3:100}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem3:100}
+\begin{aligned}
 \Abs{\Gamma_\txtL}
-= \frac{V_{\textrm{SWR}} - 1}{V_{\textrm{SWR}} + 1}
-= \frac{2.33 - 1}{2.33+1}
-= \frac{1.33}{3.33}
-= \frac{4/3}{10/3}
-= 0.4 \,\Omega.
-\end{dmath}
+&= \frac{V_{\textrm{SWR}} - 1}{V_{\textrm{SWR}} + 1}
+\\ &= \frac{2.33 - 1}{2.33+1}
+\\ &= \frac{1.33}{3.33}
+\\ &= \frac{4/3}{10/3}
+\\ &= 0.4 \,\Omega.
+\end{aligned}
+\end{equation}
 
 \makeSubAnswer{}{uwaves:problemSet1:3c}
 
 The absolute voltage at \( z = - l \) is
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem3:120}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem3:120}
 \Abs{V(-l)} = \Abs{V_0^{+}}\Abs{ 1 + \Abs{\Gamma_\txtL} e^{j(\Theta_\txtL - 2 \beta l)} },
-\end{dmath}
+\end{equation}
 
 so the maximum was measured at
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem3:160}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem3:160}
 \Theta_\txtL - 2 \beta d = 2 \pi (0),
-\end{dmath}
+\end{equation}
 
 or
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem3:140}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem3:140}
+\begin{aligned}
 \Theta_\txtL
-= 2 \beta d
-= 2 \frac{\omega}{v_\phi} d
-= \frac{4 \pi f d}{c}
-= \frac{4 \pi (3 \times 10^9 ) (9.7 \times 10^{-3}) }{3 \times 10^8}
-= 1.219 \,\si{rad}.
-\end{dmath}
+&= 2 \beta d
+\\ &= 2 \frac{\omega}{v_\phi} d
+\\ &= \frac{4 \pi f d}{c}
+\\ &= \frac{4 \pi (3 \times 10^9 ) (9.7 \times 10^{-3}) }{3 \times 10^8}
+\\ &= 1.219 \,\si{rad}.
+\end{aligned}
+\end{equation}
 
 The reflection coefficient can now be written out explicitly
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem3:n}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem3:n}
 \Gamma_\L = 0.1377 + 0.3749 j \,\Omega.
-\end{dmath}
+\end{equation}
 
 \makeSubAnswer{}{uwaves:problemSet1:3d}
 
 The load impedance is
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem3:220}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem3:220}
+\begin{aligned}
 Z_\txtL
-= Z_0 \frac{ 1 + \Gamma_\txtL }{ 1 - \Gamma_\txtL }
-= 75 \frac{ 1.4 + 0.049 j }{ 0.6 - 0.049 j }
-= 71.29 + 63.6 j \,\Omega.
-\end{dmath}
+&= Z_0 \frac{ 1 + \Gamma_\txtL }{ 1 - \Gamma_\txtL }
+\\ &= 75 \frac{ 1.4 + 0.049 j }{ 0.6 - 0.049 j }
+\\ &= 71.29 + 63.6 j \,\Omega.
+\end{aligned}
+\end{equation}
 
 The numerical results are computed in \nbref{ps1:ps1_3.jl}.
 }

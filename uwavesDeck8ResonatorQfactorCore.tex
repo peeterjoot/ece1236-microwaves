@@ -4,52 +4,58 @@
 %
 F1
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:20}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:20}
 P_{\textrm{loss} = \inv{2} \Abs{I}^2 R
-\end{dmath}
+\end{equation}
 
 Average stored magnetic energy
 \index{energy!stored magnetic}
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:40}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:40}
 W_m = \inv{4} \Abs{I}^2 L
-\end{dmath}
+\end{equation}
 
 Average stored electric energy
 \index{energy!stored electric}
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:60}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:60}
+\begin{aligned}
 W_e
-= \inv{4} \Abs{V_c}^2 C
-= \inv{4} \Abs{I}^2 \inv{\omega^2 C}
-\end{dmath}
+&= \inv{4} \Abs{V_c}^2 C
+\\ &= \inv{4} \Abs{I}^2 \inv{\omega^2 C}
+\end{aligned}
+\end{equation}
 
 \index{resonance}
 At resonance \( W_m = W_e \) or
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:80}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:80}
 L = \inv{\omega_0^2 C}
-\end{dmath}
+\end{equation}
 
 and
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:100}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:100}
 \omega_0 = \inv{\sqrt{L C}}
-\end{dmath}
+\end{equation}
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:120}
-Q = \omega_0 \frac{\textrm{average stored energy}}{\textrm{energy loss/second}}
-= \omega_0 \frac{W_e + W_m}{P_\loss}
-\end{dmath}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:120}
+\begin{aligned}
+Q &= \omega_0 \frac{\textrm{average stored energy}}{\textrm{energy loss/second}}
+\\ &= \omega_0 \frac{W_e + W_m}{P_\loss}
+\end{aligned}
+\end{equation}
 
 At resonance,  \( W_m = W_e = \inv{4} \Abs{I}^2 L\), so
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:140}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:140}
+\begin{aligned}
 Q
-= \omega_0 \frac{\inv{2} \Abs{I}^2 L}{\inv{2} \Abs{I}^2 R}
-= \omega_0 \frac{L}{R}
-= \frac{X}{R}
-\end{dmath}
+&= \omega_0 \frac{\inv{2} \Abs{I}^2 L}{\inv{2} \Abs{I}^2 R}
+\\ &= \omega_0 \frac{L}{R}
+\\ &= \frac{X}{R}
+\end{aligned}
+\end{equation}
 
 High Q, means that we have low losses, but is also a measure of the bandwidth.
 
@@ -59,55 +65,61 @@ High Q, means that we have low losses, but is also a measure of the bandwidth.
 
 To see why this measures the bandwidth, lets find the impedance
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:160}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:160}
+\begin{aligned}
 Z_{\textrm{in}}
-= R + j \omega L - \frac{j}{\omega C}
-= R + j \omega L \lr{ 1 - \inv{\omega^2 L C} }
-= R + j \omega L \frac{\omega^2 - \omega_0^2}{\omega^2},
-\end{dmath}
+&= R + j \omega L - \frac{j}{\omega C}
+\\ &= R + j \omega L \lr{ 1 - \inv{\omega^2 L C} }
+\\ &= R + j \omega L \frac{\omega^2 - \omega_0^2}{\omega^2},
+\end{aligned}
+\end{equation}
 
 where the resonant frequency is
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:180}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:180}
 \omega_0 = \inv{\sqrt{LC}}
-\end{dmath}
+\end{equation}
 
 Also,
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:200}
-\omega^2 - \omega_0^2 = \lr{ \omega - \omega_0 }\lr{ \omega + \omega_0 }
-=
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:200}
+\begin{aligned}
+\omega^2 - \omega_0^2 &= \lr{ \omega - \omega_0 }\lr{ \omega + \omega_0 }
+\\ &=
 ...
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 F2
 
 The half-power bandwidth is defined when \( \Abs{Z_{\textrm{in}}} = \sqrt{2} R \).  In this case the fractional bandwidth
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:220}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:220}
 BW = \frac{2 \Delta \omega}{\omega_0}
-\end{dmath}
+\end{equation}
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:240}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:240}
 Z_{\textrm{in}} = R + j R Q BW,
-\end{dmath}
+\end{equation}
 
 gives
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:260}
-\Abs{Z_{\textrm{in}}}^2 = R^2\lr{ 1 + Q^2 BW^2 } = 2 R^2,
-\end{dmath}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:260}
+\begin{aligned}
+\Abs{Z_{\textrm{in}}}^2 &= R^2\lr{ 1 + Q^2 BW^2 } \\ &= 2 R^2,
+\end{aligned}
+\end{equation}
 
 or
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:280}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:280}
 Q^2 BW^2 = 1,
-\end{dmath}
+\end{equation}
 
 or
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:300}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:300}
 BW = \inv{Q}
-\end{dmath}
+\end{equation}
 
 ...
 
@@ -119,9 +131,9 @@ F8
 
 We want low \( Q \) in this case
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 Q = \frac{\omega L}{R_\ant},
-\end{dmath}
+\end{equation}
 
 a small antenna conspires to produce a high Q, both from having a small radiation resistance, and due to large inductance.
 
@@ -146,13 +158,15 @@ series case:
 
 F6
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:320}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:320}
 V_c = \frac{I}{j \omega C}
-\end{dmath}
+\end{equation}
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
-Q = \frac{X_c}{R} = \inv{\omega R C}
-\end{dmath}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{aligned}
+Q &= \frac{X_c}{R} \\ &= \inv{\omega R C}
+\end{aligned}
+\end{equation}
 
 Parallel (shunt) case:
 
@@ -160,13 +174,14 @@ Parallel (shunt) case:
 Q
 = \omega \frac{ W_e + W_m }{P_L}
 = \omega \frac{\textrm{...}}{\textrm{...}}
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:340}
-
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:340}
+\begin{aligned}
 F7
 
 \begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:360}
-Q = \frac{B_c}{G} = \omega R C
-\end{dmath}
+Q &= \frac{B_c}{G} \\ &= \omega R C
+\end{aligned}
+\end{equation}
 
 Large resistance (low loss), means high Q.
 
@@ -175,15 +190,19 @@ Large resistance (low loss), means high Q.
 
 F10
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
-Q_\txts = \frac{X_L}{R} = \frac{\omega L}{R}
-\end{dmath}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{aligned}
+Q_\txts &= \frac{X_L}{R} \\ &= \frac{\omega L}{R}
+\end{aligned}
+\end{equation}
 
 F11
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
-Q_\txtp = \frac{R_L}{G} = \frac{R}{\omega L}
-\end{dmath}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{aligned}
+Q_\txtp &= \frac{R_L}{G} \\ &= \frac{R}{\omega L}
+\end{aligned}
+\end{equation}
 
 \paragraph{Plot of constant \( Q = X/R \) contours (circular arcs) on the Smith Chart}
 \index{Smith chart!constant contours}
@@ -194,18 +213,18 @@ F12
 
 we can plot the ratio
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 Q = \frac{X}{R}
-\end{dmath}
+\end{equation}
 
 
 F13 (generated with Matlab)
 
 The \( Q \) is then dictated by the load, for example, for a series inductive load
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 Q_\L = \frac{\omega L }{R}
-\end{dmath}
+\end{equation}
 
 so for a given load the bandwidth is dictated.
 
@@ -216,9 +235,9 @@ For a shunt RC load
 
 F14
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 \int_0^\infty \ln \frac{1}{\Abs{\Gamma(\omega}} d\omega < \frac{\pi}{R C}
-\end{dmath}
+\end{equation}
 
 Suppose we have reflection relation like
 
@@ -226,21 +245,21 @@ F15
 
 representing a finite bandwidth.  Where the reflection coefficient is unity, the log is zero, then the Bode
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 \ln \frac{1}{\Abs{\Gamma(\omega}} \Delta\omega < \frac{\pi}{R C}
-\end{dmath}
+\end{equation}
 
 So, to get more bandwidth, we have to sacrifice some reflectivity.  This also implies that if the reflection coefficient is zero, we have zero bandwidth.
 
 In terms of
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 Q = \omega_0 R C ,
-\end{dmath}
+\end{equation}
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 ... \frac{ \Delta \omega}{\omega_0} < \frac{\pi}{Q}
-\end{dmath}
+\end{equation}
 ...
 
 \paragraph{Example with low \( Q = 10 \) }
@@ -250,22 +269,22 @@ Q = \omega_0 R C ,
 \item
 If \( \Gamma_m \) is small, say \( \Gamma_m = 0.1 \), then
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 2.33 \frac{ \Delta \omega}{\omega_0} < ...
-\end{dmath}
+\end{equation}
 
 \item
 If \( \Gamma_m \) is larger, say \( \Gamma_m = 0.5 \), then
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 0.7 \frac{ \Delta \omega}{\omega_0}  < 0.1 \pi
-\end{dmath}
+\end{equation}
 
 so
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 \frac{ \Delta \omega}{\omega_0 } <
-\end{dmath}
+\end{equation}
 
 \item If \( Q \) is very high.
 \end{itemize}
@@ -282,27 +301,27 @@ F17
 
 where
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 \Gamma_\in = \frac{Z_\in - Z_0}{Z_\in + Z_0},
-\end{dmath}
+\end{equation}
 
 and
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 \Gamma_\out = \frac{Z_\out - R }{Z_\out + R}.
-\end{dmath}
+\end{equation}
 
 We need to show that
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 \int_{-\infty}^\infty = \ln \inv{\Abs{\Gamma{\omega}} d\omega \le \frac{\pi}{R C }
-\end{dmath}
+\end{equation}
 
 Notice how we include \( C \) in the definition of \( Z_\out \).  Because the matching network (M.N.) is lossless
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 \Abs{\Gamma_\in} = \Abs{\Gamma_\out},
-\end{dmath}
+\end{equation}
 
 It is more convenient to use \( \Abs{\Gamma_\out} \).  The key physical observation is that when the capacitor is shorted, we cannot pass power to the load (\(R\)).  That power has to go somewhere, and has to be reflected.
 
@@ -314,16 +333,16 @@ F18
 
 Now consider the return loss function defined as
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 \ln \inv{\Abs{\Gamma_\out}} > 0
-\end{dmath}
+\end{equation}
 
 we would like to determine the maximum value of
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 \int
 \ln \inv{\Abs{\Gamma_\out}} d\omega
-\end{dmath}
+\end{equation}
 
 \Gamma(s) = \frac{Z_\in - Z_0}{Z_\in + Z_0}
 
@@ -331,28 +350,30 @@ F19
 
 We can only get poles when
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
-Z_\in + Z_0 = R_\in + j X_\in + Z_0 = 0,
-\end{dmath}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{aligned}
+Z_\in + Z_0 &= R_\in + j X_\in + Z_0 \\ &= 0,
+\end{aligned}
+\end{equation}
 
 so we have no poles.  On the other hand, we can have zeros where \( Z_\in - Z_0 = 0 \).
 
 That implies that integration around a closed contour gives zero, for example
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 \oint \Abs{ \Gamma(s) } ds = 0
-\end{dmath}
+\end{equation}
 
 Some basic relations can be obtained from this, but that isn't what Bode did.  Instead he picked the log of the reflection coefficient
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 \oint
 \ln \inv{\Abs{\Gamma}} d\omega
 =
 -\oint
 \ln \Abs{\Gamma} d\omega
 \ne 0.
-\end{dmath}
+\end{equation}
 
 Because \( \Gamma \) can have zeros, the log makes those right hand plane poles
 
@@ -363,14 +384,14 @@ Assume that \( a_1, a_2, \cdots \) are poles on the RHP due to the load and te m
 
 Now on the RHP there are no singularities, so on a contour considering of the imaginary axes (frequency axes) and a large semicircle of radius \( R_0 \rightarrow \infty \).
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 \oint \ln \Abs{ \inv{\Gamma}
 \frac{s - a_1}{s+ a_1}
 \frac{s - a_2}{s+ a_2}
 \frac{s - a_3}{s+ a_3}
 \cdots
 } d\omega
-\end{dmath}
+\end{equation}
 
 Now on the frequency axes ( \( j \omega \) )
 
@@ -384,22 +405,22 @@ if \( a_1 \) is real.
 
 Hence on the \( s = j \omega \) axis the integrand becomes equal to
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 j \int \ln \inv{\Abs{\Gamma}} d\omega
-\end{dmath}
+\end{equation}
 
 On the large semicircle, each term
 
 \ln \Abs{\frac{s - a_i}{s + a_i} } contributes for \( s \rightarrow \infty \), as follows.  Let
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 s = R_0 e^{j \theta}
-\end{dmath}
+\end{equation}
 
 so
 
-\begin{dmath}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
+\begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:n}
 \ln \Abs{\frac{s - a_i}{s + a_i} }
 \approx
 \ln \Abs{\frac{s - a_i}{s + a_i} }
-\end{dmath}
+\end{equation}

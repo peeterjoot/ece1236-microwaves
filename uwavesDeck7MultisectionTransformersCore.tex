@@ -47,12 +47,14 @@ Why?  Consider reflections at the Z_1, Z_2 interface as sketched in \cref{fig:de
 
 Assuming small reflections, where \( \Abs{\Gamma} \ll 1 \) then \( T = 1 + \Gamma \approx 1 \).  Here
 
-\begin{dmath}\label{eqn:uwavesDeck7MultisectionTransformersCore:100}
+\begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:100}
+\begin{aligned}
 \Theta
-= \beta l
-= \frac{2 \pi}{\lambda} \frac{\lambda}{4}
-= \frac{\pi}{2}.
-\end{dmath}
+&= \beta l
+\\ &= \frac{2 \pi}{\lambda} \frac{\lambda}{4}
+\\ &= \frac{\pi}{2}.
+\end{aligned}
+\end{equation}
 
 at the design frequency \( \omega_0 \).  We assume that \( Z_n \) are either monotonically increasing if \( R_\txtL > Z_0 \), or decreasing if \( R_\txtL < Z_0 \).
 
@@ -70,13 +72,15 @@ This type of a response is maximally flat, and is plotted in \cref{fig:multitran
 
 The absolute value of the reflection coefficient is
 
-\begin{dmath}\label{eqn:uwavesDeck7MultisectionTransformersCore:160}
+\begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:160}
+\begin{aligned}
 \Abs{\Gamma(\Theta)}
-=
+&=
 \Abs{A} \lr{ e^{j \Theta} + e^{- j \Theta} }^N
-=
+\\ &=
 2^N \Abs{A} \cos^N\Theta.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 When \( \Theta = \pi/2 \) this is clearly zero.  It's derivatives are
 
@@ -108,11 +112,13 @@ A = 2^{-N} \frac{Z_\txtL - Z_0}{Z_\txtL + Z_0}.
 
 The reflection coefficient can now be expanded using the binomial theorem
 
-\begin{dmath}\label{eqn:uwavesDeck7MultisectionTransformersCore:240}
+\begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:240}
+\begin{aligned}
 \Gamma(\Theta)
-= A \lr{ 1 + e^{ 2 j \Theta } }^N
-= \sum_{k = 0}^N \binom{N}{k} e^{ -2 j k \Theta}
-\end{dmath}
+&= A \lr{ 1 + e^{ 2 j \Theta } }^N
+\\ &= \sum_{k = 0}^N \binom{N}{k} e^{ -2 j k \Theta}
+\end{aligned}
+\end{equation}
 
 Recall that
 
@@ -154,40 +160,46 @@ so for \( x \) near unity a first order approximation of a logarithm is
 
 Assuming that \( Z_{k+1}/Z_k \) is near unity we have
 
-\begin{dmath}\label{eqn:uwavesDeck7MultisectionTransformersCore:360}
+\begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:360}
+\begin{aligned}
 \inv{2} \ln \frac{Z_{k+1}}{Z_k}
 \approx
 \frac{ \frac{Z_{k+1}}{Z_k} - 1 }{\frac{Z_{k+1}}{Z_k} + 1}
-=
+&=
 \frac{ Z_{k+1} - Z_k }{Z_{k+1} + Z_k}
-=
+\\ &=
 \Gamma_k.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 Using this approximation, we get
 
-\begin{dmath}\label{eqn:uwavesDeck7MultisectionTransformersCore:380}
+\begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:380}
+\begin{aligned}
 \ln \frac{Z_{k+1}}{Z_k}
 \approx
 2 \Gamma_k
-= 2 A \binom{N}{k}
-= 2 \lr{2^{-N}} \binom{N}{k} \frac{Z_\txtL - Z_0}{Z_\txtL + Z_0}
+&= 2 A \binom{N}{k}
+\\ &= 2 \lr{2^{-N}} \binom{N}{k} \frac{Z_\txtL - Z_0}{Z_\txtL + Z_0}
 \approx
 2^{-N} \binom{N}{k} \ln \frac{Z_\txtL}{Z_0},
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 I asked what business do we have in assuming that \( Z_\txtL/Z_0 \) is near unity?  The answer was that it isn't but surprisingly it works out well enough despite that.  As an example, consider \( Z_0 = 100 \Omega \) and \( R_\txtL = 50 \Omega \).  The exact expression
 
-\begin{dmath}\label{eqn:uwavesDeck7MultisectionTransformersCore:880}
+\begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:880}
+\begin{aligned}
 \frac{Z_\txtL - Z_0}{Z_\txtL + Z_0}
-= \frac{100-50}{100+50}
-= -0.333,
-\end{dmath}
+&= \frac{100-50}{100+50}
+\\ &= -0.333,
+\end{aligned}
+\end{equation}
 
 whereas
-\begin{dmath}\label{eqn:uwavesDeck7MultisectionTransformersCore:900}
+\begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:900}
 \inv{2} \ln \frac{Z_\txtL}{Z_0} = -0.3466,
-\end{dmath}
+\end{equation}
 
 which is pretty close after all.
 
@@ -202,33 +214,37 @@ To evaluate the bandwidth, let \( \Gamma_{\mathrm{m}} \) be the maximum tolerabl
 
 That is
 
-\begin{dmath}\label{eqn:uwavesDeck7MultisectionTransformersCore:400}
+\begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:400}
+\begin{aligned}
 \Gamma_m
-= 2^N \Abs{A} \Abs{\cos \Theta_m }^N
-= 2^N \Abs{A} \cos^N \Theta_m,
-\end{dmath}
+&= 2^N \Abs{A} \Abs{\cos \Theta_m }^N
+\\ &= 2^N \Abs{A} \cos^N \Theta_m,
+\end{aligned}
+\end{equation}
 
 for \( \Theta_m < \pi/2 \).  Then
 
-\begin{dmath}\label{eqn:uwavesDeck7MultisectionTransformersCore:420}
+\begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:420}
 \Theta_m = \arccos\lr{ \inv{2} \lr{ \frac{\Gamma_{\mathrm{m}}}{\Abs{A}}}^{1/N} }
-\end{dmath}
+\end{equation}
 
 The relative width of the interval is
 
-\begin{dmath}\label{eqn:uwavesDeck7MultisectionTransformersCore:440}
+\begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:440}
+\begin{aligned}
 \frac{\Delta f_{\mathrm{max}}}{f_0}
-=
+&=
 \frac{\Delta \Theta_{\mathrm{max}}}{\Theta_0}
-=
+\\ &=
 \frac{2 (\Theta_0 - \Theta_{\mathrm{max}}}{\Theta_0}
-=
+\\ &=
 2 - \frac{2 \Theta_{\mathrm{max}}}{\Theta_0}
-=
+\\ &=
 2 - \frac{4 \Theta_{\mathrm{max}}}{\pi}
-=
+\\ &=
 2 - \frac{4 }{\pi} \arccos\lr{ \inv{2} \lr{ \frac{\Gamma_{\mathrm{max}}}{\Abs{A}}}^{1/N} }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 \makeexample{Three section binomial transformer.}{example:uwavesDeck7MultisectionTransformersCore:1}{
 
@@ -252,10 +268,10 @@ A
 
 Now use
 
-\begin{dmath}\label{eqn:uwavesDeck7MultisectionTransformersCore:940}
+\begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:940}
 \ln \frac{Z_{n+1}}{Z_n}
 \approx 2^{-N} \binom{N}{n} \ln \frac{R_\txtL}{Z_0},
-\end{dmath}
+\end{equation}
 
 starting from
 
@@ -267,12 +283,14 @@ starting from
 \end{equation}
 
 or
-\begin{dmath}\label{eqn:uwavesDeck7MultisectionTransformersCore:500}
+\begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:500}
+\begin{aligned}
 \ln Z_{1}
-= \ln Z_0 + 2^{-3} \binom{3}{0} \ln \frac{R_\txtL}{Z_0}
-= \ln 100 + 2^{-3} (1) \ln 0.5
-= 4.518,
-\end{dmath}
+&= \ln Z_0 + 2^{-3} \binom{3}{0} \ln \frac{R_\txtL}{Z_0}
+\\ &= \ln 100 + 2^{-3} (1) \ln 0.5
+\\ &= 4.518,
+\end{aligned}
+\end{equation}
 
 so
 \begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:520}
@@ -281,27 +299,31 @@ Z_1 = 91.7 \Omega
 
 \item \( n = 1 \)
 
-\begin{dmath}\label{eqn:uwavesDeck7MultisectionTransformersCore:540}
+\begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:540}
+\begin{aligned}
 \ln Z_{2}
-= \ln Z_1 + 2^{-3} \binom{3}{1} \ln \frac{50}{100} = 4.26
-\end{dmath}
+&= \ln Z_1 + 2^{-3} \binom{3}{1} \ln \frac{50}{100} \\ &= 4.26
+\end{aligned}
+\end{equation}
 
 so
-\begin{dmath}\label{eqn:uwavesDeck7MultisectionTransformersCore:560}
+\begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:560}
 Z_2 = 70.7 \Omega
-\end{dmath}
+\end{equation}
 
 \item \( n = 2 \)
 
-\begin{dmath}\label{eqn:uwavesDeck7MultisectionTransformersCore:580}
-\ln Z_{3} = \ln Z_2 + 2^{-3} \binom{3}{2} \ln \frac{50}{100} = 4.0,
-\end{dmath}
+\begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:580}
+\begin{aligned}
+\ln Z_{3} &= \ln Z_2 + 2^{-3} \binom{3}{2} \ln \frac{50}{100} \\ &= 4.0,
+\end{aligned}
+\end{equation}
 
 so
 
-\begin{dmath}\label{eqn:uwavesDeck7MultisectionTransformersCore:600}
+\begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:600}
 Z_3 = 54.5 \Omega.
-\end{dmath}
+\end{equation}
 
 \end{itemize}
 
@@ -310,14 +332,16 @@ Z_3 = 54.5 \Omega.
 \index{fractional bandwidth}
 With the fractional BW for \( \Gamma_m = 0.05 \), where \( 10 \log_{10} \Abs{\Gamma_m}^2 = -26 \si{dB} \)
 
-\begin{dmath}\label{eqn:uwavesDeck7MultisectionTransformersCore:920}
+\begin{equation}\label{eqn:uwavesDeck7MultisectionTransformersCore:920}
+\begin{aligned}
 \frac{\Delta f}{f_0}
 \approx
 2 - \frac{4}{\pi} \arccos\lr{ \inv{2} \lr{ \frac{\Gamma_m}{\Abs{A}} }^{1/N} }
-=
+&=
 2 - \frac{4}{\pi} \arccos\lr{ \inv{2} \lr{ \frac{0.05}{0.0433} }^{1/3} }
-= 0.7
-\end{dmath}
+\\ &= 0.7
+\end{aligned}
+\end{equation}
 
 At \( 2 \si{GHz} \), \( BW = 0.7 (70\%) = 1.4 \si{GHz} \), or \( [2.3,2.7] \si{GHz} \), whereas a single \( \lambda/4 \) transformer \( Z_T = \sqrt{ (100)(50) } = 70.7 \Omega \) yields a BW of just \( 0.36 \si{GHz} \) (18\%).
 

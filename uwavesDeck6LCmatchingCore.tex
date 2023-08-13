@@ -8,11 +8,13 @@
 
 Available power from the source (maximum power that can be delivered) is
 
-\begin{dmath}\label{eqn:uwavesDeck6LCmatchingCore:20}
+\begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:20}
+\begin{aligned}
 P_A
-= \frac{\Abs{V_\txtG/2}^2}{2 Z_\txtG}
-= \frac{\Abs{V_\txtG}^2}{8 R_\txtG}.
-\end{dmath}
+&= \frac{\Abs{V_\txtG/2}^2}{2 Z_\txtG}
+\\ &= \frac{\Abs{V_\txtG}^2}{8 R_\txtG}.
+\end{aligned}
+\end{equation}
 
 For the general matching network sketched in
 
@@ -20,51 +22,55 @@ F3
 
 it is left as a problem to show that
 
-\begin{dmath}\label{eqn:uwavesDeck6LCmatchingCore:40}
+\begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:40}
 P_\txtL = P_A \frac{
 \lr{ 1 - \Abs{\Gamma_\txtG}^2 }
 \lr{ 1 - \Abs{\Gamma_\txtL}^2 } }
 {
 \Abs{ 1 - \Gamma_\txtG \Gamma_\txtL e^{-2 j \beta l } }^2
 }
-\end{dmath}
+\end{equation}
 
 for a matched line
 
-\begin{dmath}\label{eqn:uwavesDeck6LCmatchingCore:60}
+\begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:60}
 P_\txtL = P_A
-\end{dmath}
+\end{equation}
 
 Matching cases
 
 \begin{enumerate}
 \item Line matched to load \( Z_\txtL' = Z_0 \), so that
 
-\begin{dmath}\label{eqn:uwavesDeck6LCmatchingCore:80}
+\begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:80}
+\begin{aligned}
 \Gamma_\txtL
-= \frac{Z_\txtL' - Z_0}{Z_\txtL' + Z_0}
-= 0.
-\end{dmath}
+&= \frac{Z_\txtL' - Z_0}{Z_\txtL' + Z_0}
+\\ &= 0.
+\end{aligned}
+\end{equation}
 
 In this case,
 
-\begin{dmath}\label{eqn:uwavesDeck6LCmatchingCore:100}
+\begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:100}
 P_\txtL = P_A \lr{ 1 - \Abs{\Gamma_\txtG}^2 }
-\end{dmath}
+\end{equation}
 
 \item With a line matched to generator, \( Z_\txtG' = Z_0 \), so
 
-\begin{dmath}\label{eqn:uwavesDeck6LCmatchingCore:120}
+\begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:120}
+\begin{aligned}
 \Gamma_\txtG
-= \frac{Z_\txtG' - Z_0}{Z_\txtL' + Z_0}
-= 0.
-\end{dmath}
+&= \frac{Z_\txtG' - Z_0}{Z_\txtL' + Z_0}
+\\ &= 0.
+\end{aligned}
+\end{equation}
 
 Now we have
 
-\begin{dmath}\label{eqn:uwavesDeck6LCmatchingCore:140}
+\begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:140}
 P_\txtL = P_A \lr{ 1 - \Abs{\Gamma_\txtL}^2 }
-\end{dmath}
+\end{equation}
 
 \item Line matched to both the load and the generator, with \( Z_\txtG' = Z_0, Z_\txtL' = Z_0 \),
 so that \( \Gamma_\txtG = \Gamma_\txtL = 0 \).
@@ -72,11 +78,13 @@ In this case \( P_\txtL = P_A \) and there are reflections on the line.
 
 \item With conjugate matching, where \( Z_{\textrm{in}} = Z_\txtG^\conj \), we have
 
-\begin{dmath}\label{eqn:uwavesDeck6LCmatchingCore:160}
+\begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:160}
+\begin{aligned}
 \Gamma_\txtG
-= \frac{Z_\txtG' - Z_0}{Z_\txtG' + Z_0}
-= \frac{Z_{\textrm{in}}^\conj - Z_0}{Z_\txtG' + Z_0}
-\end{dmath}
+&= \frac{Z_\txtG' - Z_0}{Z_\txtG' + Z_0}
+\\ &= \frac{Z_{\textrm{in}}^\conj - Z_0}{Z_\txtG' + Z_0}
+\end{aligned}
+\end{equation}
 
 FIXME: this part of his notes doesn't make sense.
 

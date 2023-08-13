@@ -46,39 +46,45 @@ To get some quick results, the transmission line can be treated as a large paral
 
 Using a Gaussian volume the width of the plate we have
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:20}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:20}
+\begin{aligned}
 \int \BD \cdot \ncap dA
-= 2 \epsilon E w l
-= Q,
-\end{dmath}
+&= 2 \epsilon E w l
+\\ &= Q,
+\end{aligned}
+\end{equation}
 
 so the magnitude of the field for one plate is
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:40}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:40}
 E = \frac{Q}{2 \epsilon w l}
-\end{dmath}
+\end{equation}
 
 Introducing a second plate with equal but opposite charge density on it, we have cancelation of the electric field outside of the plates, but a doubling within.  The magnitude of the total electric field between the plates is therefore
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:60}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:60}
 \BE = -\frac{Q}{\epsilon w l} \ycap.
-\end{dmath}
+\end{equation}
 
 The voltage difference between the plates is
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:80}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:80}
+\begin{aligned}
 V
-= \int_0^d E dl
-= \frac{Q d}{\epsilon w l} .
-\end{dmath}
+&= \int_0^d E dl
+\\ &= \frac{Q d}{\epsilon w l} .
+\end{aligned}
+\end{equation}
 
 The capacitance per unit length is
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:100}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:100}
+\begin{aligned}
 C'
-= \frac{Q/l}{V}
-= \frac{(Q/l) (\epsilon w l)}{Q d}
-\end{dmath}
+&= \frac{Q/l}{V}
+\\ &= \frac{(Q/l) (\epsilon w l)}{Q d}
+\end{aligned}
+\end{equation}
 
 \boxedEquation{eqn:uwavesproblemSet1Problem4:120}{
 C' = \frac{\epsilon w}{d}.
@@ -94,37 +100,41 @@ For the magnetic field the situation is similar.  Suppose the magnetic field is 
 
 Integrating over the loop \( C \) that surrounds the top plate we have
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:140}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:140}
+\begin{aligned}
 \oint \BD \cdot d\Bl
-=
-2 H w = I,
-\end{dmath}
+&=
+2 H w \\ &= I,
+\end{aligned}
+\end{equation}
 
 or
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:160}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:160}
 H = \frac{I}{2w}.
-\end{dmath}
+\end{equation}
 
 Like the electric field, an opposite charge on the other plate leads to a doubled magnetic field in the cavity, and no magnetic field outside the plates, so the total magnetic field magnitude in the cavity is
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:180}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:180}
 H = \frac{I}{w}.
-\end{dmath}
+\end{equation}
 
 Calculating the flux through the side we have
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:200}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:200}
+\begin{aligned}
 \Phi
-= \int \BB \cdot d\BA
-= \mu H l d
-= \frac{\mu I l d}{w}
-\end{dmath}
+&= \int \BB \cdot d\BA
+\\ &= \mu H l d
+\\ &= \frac{\mu I l d}{w}
+\end{aligned}
+\end{equation}
 
 The inductance per unit length is
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:220}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:220}
 L'
 = \frac{\Phi/l}{I},
-\end{dmath}
+\end{equation}
 
 or
 
@@ -137,20 +147,22 @@ L'
 
 Assuming a low-loss condition, the impedance is
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:260}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:260}
+\begin{aligned}
 Z_0
-= \sqrt{\frac{L}{C}}
-= \sqrt{ \frac{\mu d}{w}
+&= \sqrt{\frac{L}{C}}
+\\ &= \sqrt{ \frac{\mu d}{w}
 \frac{d}{\epsilon w }
 }
-= \frac{d}{w} \sqrt{ \frac{\mu}{\epsilon} },
-\end{dmath}
+\\ &= \frac{d}{w} \sqrt{ \frac{\mu}{\epsilon} },
+\end{aligned}
+\end{equation}
 
 or
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:280}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:280}
 Z_0
 = \frac{d}{w} \eta.
-\end{dmath}
+\end{equation}
 
 \makeSubAnswer{}{uwaves:problemSet1:4d}
 
@@ -178,12 +190,14 @@ R' = \frac{2}{\sigma w \delta_s}.
 % FIXME: reconsile this (below) with 340 above?
 Using the low-loss approximation, we have
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:360}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:360}
+\begin{aligned}
 \alpha
-= \inv{2} \lr{ \frac{R'}{Z_0} + \cancel{G Z_0} }
-= \inv{2} \lr{ \frac{2}{\sigma w \delta_s} \frac{ w}{d \eta} }
-= \frac{1}{\sigma \delta_s} \frac{ 1}{d \eta}.
-\end{dmath}
+&= \inv{2} \lr{ \frac{R'}{Z_0} + \cancel{G Z_0} }
+\\ &= \inv{2} \lr{ \frac{2}{\sigma w \delta_s} \frac{ w}{d \eta} }
+\\ &= \frac{1}{\sigma \delta_s} \frac{ 1}{d \eta}.
+\end{aligned}
+\end{equation}
 
 The leading quantity is identified in \citep{pozar2009microwave} (1.125) as the surface resistance
 
@@ -200,22 +214,18 @@ so we can write
 
 At these values of \( d/w \) we have
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:420}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:420}
 Z_0 = 37.8 \Omega.
-\end{dmath}
-
+\end{equation}
 \makeSubAnswer{}{uwaves:problemSet1:4g}
-
 With
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:440}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:440}
 \begin{aligned}
 R_\txts &= 0.05786 \Omega \\
 \eta &= 377.9.\Omega,
 \end{aligned}
-\end{dmath}
-
+\end{equation}
 we have
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:460}
 \begin{aligned}
 \alpha(1 \,\si{cm}) &= 0.0153108 \si{m^{-1}} \\
@@ -225,48 +235,50 @@ we have
 \end{equation}
 
 This by itself isn't a reasonable quantity to convert to \si{dB}, since it isn't a ratio of two quantities.  Asking about this, it turns out that the quantity of interest is the loss ratio
-
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:500}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:500}
 L \equiv e^{-2 \alpha}
-\end{dmath}
+\end{equation}
 
 This is of interest because the voltage is of the from
-
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:520}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:520}
 V = V_0 e^{-\alpha z} e^{-j \beta z},
-\end{dmath}
+\end{equation}
 
 so the ratio of powers relative to the \( z = 0 \) power is
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:540}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:540}
+\begin{aligned}
 \frac{P}{P_0}
-=
+&=
 \frac{\Abs{V}^2}{\Abs{V_0}^2}
-=
+\\ &=
 e^{-2 \alpha z}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 The loss factor for one wavelength (something that could be expressed as \si{dB/m}) would be
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:560}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:560}
 e^{-2 \alpha \lambda},
-\end{dmath}
+\end{equation}
 
 whereas the loss factor for one meter ( \( z = 1 \) ), is
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:580}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:580}
 L = e^{-2 \alpha }.
-\end{dmath}
+\end{equation}
 
 In \si{dB} losses are
 
-\begin{dmath}\label{eqn:uwavesproblemSet1Problem4:600}
+\begin{equation}\label{eqn:uwavesproblemSet1Problem4:600}
+\begin{aligned}
 -10 \log_{10} L
-=
+&=
 -10 \log_{10} e^{-2 \alpha }
-=
+\\ &=
 20 \alpha \log_{10} e.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 Note that the sign has been toggled to express the result as \si{dB} \underline{loss} (as opposed to \si{dB} \underline{gain}, where we'd normally want a positive sign)
 

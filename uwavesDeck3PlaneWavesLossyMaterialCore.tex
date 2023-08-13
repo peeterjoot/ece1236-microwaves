@@ -27,13 +27,15 @@ where
 \index{permittivity!complex}
 The effective complex permittivity \( \epsilon_{\mathrm{eff}} = \epsilon' -j \epsilon'' \) is obtained from Ampere's law
 
-\begin{dmath}\label{eqn:uwavesLecture3:80}
+\begin{equation}\label{eqn:uwavesLecture3:80}
+\begin{aligned}
 \spacegrad \cross \BH
-= \BJ + j \omega \epsilon \BE
-= \sigma \BE + j \omega \epsilon \BE
-= \lr{ \sigma + j \omega \epsilon } \BE
-= j \omega \lr{ \epsilon -j \frac{\sigma}{\omega} } \BE ,
-\end{dmath}
+&= \BJ + j \omega \epsilon \BE
+\\ &= \sigma \BE + j \omega \epsilon \BE
+\\ &= \lr{ \sigma + j \omega \epsilon } \BE
+\\ &= j \omega \lr{ \epsilon -j \frac{\sigma}{\omega} } \BE ,
+\end{aligned}
+\end{equation}
 
 so
 \begin{equation}\label{eqn:uwavesLecture3:100}
@@ -46,13 +48,15 @@ so
 
 Since \( \gamma = j \omega \sqrt{ \mu \epsilon_{\mathrm{eff}} } \) and \( \gamma^2 = -\omega^2 \mu \epsilon_{\mathrm{eff}} \) we see that
 
-\begin{dmath}\label{eqn:uwavesLecture3:120}
+\begin{equation}\label{eqn:uwavesLecture3:120}
+\begin{aligned}
 (\alpha + j \beta)^2
-= (\alpha^2 - \beta^2) + j 2 \alpha \beta
-= - \omega^2 \mu \epsilon_{\mathrm{eff}}
-= - \omega^2 \mu \epsilon'
+&= (\alpha^2 - \beta^2) + j 2 \alpha \beta
+\\ &= - \omega^2 \mu \epsilon_{\mathrm{eff}}
+\\ &= - \omega^2 \mu \epsilon'
   + j \omega^2 \mu \epsilon'',
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 therefore
 
@@ -74,33 +78,39 @@ Solving for \( \alpha \) and \( \beta \) yields
 
 Assuming propagation along \( + \zcap \)
 
-\begin{dmath}\label{eqn:uwavesLecture3:180}
+\begin{equation}\label{eqn:uwavesLecture3:180}
+\begin{aligned}
 \BE(z)
-= \xcap E_x(z)
-= \xcap E_{x0} e^{-\gamma z}
-= \xcap E_{x0} e^{-\alpha z} e^{-j \beta z}
-\end{dmath}
+&= \xcap E_x(z)
+\\ &= \xcap E_{x0} e^{-\gamma z}
+\\ &= \xcap E_{x0} e^{-\alpha z} e^{-j \beta z}
+\end{aligned}
+\end{equation}
 
 The magnetic field can be determined from
 
-\begin{dmath}\label{eqn:uwavesLecture3:200}
+\begin{equation}\label{eqn:uwavesLecture3:200}
 \spacegrad \cross \BE = - j \omega \mu \BH,
-\end{dmath}
+\end{equation}
 
 or
 
-\begin{dmath}\label{eqn:uwavesLecture3:220}
+\begin{equation}\label{eqn:uwavesLecture3:220}
+\begin{aligned}
 \BH
-= \ycap \frac{E_x}{\eta_\txtc}
-= \ycap \frac{E_{x0}}{\eta_\txtc} e^{-\alpha z} e^{-j \beta z},
-\end{dmath}
+&= \ycap \frac{E_x}{\eta_\txtc}
+\\ &= \ycap \frac{E_{x0}}{\eta_\txtc} e^{-\alpha z} e^{-j \beta z},
+\end{aligned}
+\end{equation}
 
 where
-\begin{dmath}\label{eqn:uwavesLecture3:240}
+\begin{equation}\label{eqn:uwavesLecture3:240}
+\begin{aligned}
 \eta_\txtc
-= \sqrt{\frac{\mu}{\epsilon_{\mathrm{eff}}}}
-= \sqrt{\frac{\mu}{\epsilon'}} \lr{ 1 - j \frac{\epsilon''}{\epsilon'} }^{-1/2} \qquad \Omega,
-\end{dmath}
+&= \sqrt{\frac{\mu}{\epsilon_{\mathrm{eff}}}}
+\\ &= \sqrt{\frac{\mu}{\epsilon'}} \lr{ 1 - j \frac{\epsilon''}{\epsilon'} }^{-1/2} \qquad \Omega,
+\end{aligned}
+\end{equation}
 
 is the complex intrinsic impedance of the medium.  Note that since \( \eta_\txtc \) is complex the electric and magnetic fields are no longer in phase.
 
@@ -137,17 +147,17 @@ This is sketched in \cref{fig:deck3Lossy:deck3LossyFig1}.
 
 A low loss dielectric medium is characterized by \( \epsilon'' \ll \epsilon' \), so \( \epsilon \approx \epsilon' \).  This gives
 
-\begin{dmath}\label{eqn:uwavesLecture3:320}
+\begin{equation}\label{eqn:uwavesLecture3:320}
 \gamma
 =
 j \omega \sqrt{\mu \epsilon' } \lr{ 1 -j \frac{\epsilon''}{\epsilon'}}^{1/2}
 \approx
 j \omega \sqrt{\mu \epsilon' } \lr{ 1 - j \frac{\epsilon''}{2 \epsilon'}}.
-\end{dmath}
+\end{equation}
 
 Hence
 
-\begin{dmath}\label{eqn:uwavesLecture3:340}
+\begin{equation}\label{eqn:uwavesLecture3:340}
 \alpha
 \approx
 \omega \sqrt{\mu \epsilon'} \frac{\epsilon''}{2 \epsilon'}
@@ -155,35 +165,37 @@ Hence
 \frac{\sigma}{2} \sqrt{\frac{\mu}{\epsilon'}}
 \approx
 \frac{\sigma}{2} \sqrt{\frac{\mu}{\epsilon}}.
-\end{dmath}
+\end{equation}
 
-\begin{dmath}\label{eqn:uwavesLecture3:360}
+\begin{equation}\label{eqn:uwavesLecture3:360}
 \beta
 \approx
 \omega \sqrt{\mu \epsilon'}
 \approx
 \omega \sqrt{\mu \epsilon},
-\end{dmath}
+\end{equation}
 
 which is the same as in the lossless medium \( \epsilon \).  Also in this case
 
-\begin{dmath}\label{eqn:uwavesLecture3:380}
+\begin{equation}\label{eqn:uwavesLecture3:380}
+\begin{aligned}
 \eta_\txtc
-=
+&=
 \sqrt{\frac{\mu}{\epsilon'}} \lr{ 1 - j \frac{\epsilon''}{\epsilon'} }^{-1/2}
 \approx
 \sqrt{\frac{\mu}{\epsilon'}} \lr{ 1 + j \frac{\epsilon''}{2 \epsilon'} }
-=
+\\ &=
 \sqrt{\frac{\mu}{\epsilon'}} \lr{ 1 + j \frac{\sigma}{2 \omega \epsilon'} }
 \approx
 \sqrt{\frac{\mu}{\epsilon'}},
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 (for \( \sigma \ll \omega \epsilon \), (a good dielectric), so
 
-\begin{dmath}\label{eqn:uwavesLecture3:400}
+\begin{equation}\label{eqn:uwavesLecture3:400}
 \eta_\txtc \approx \sqrt{\frac{\mu}{\epsilon}},
-\end{dmath}
+\end{equation}
 
 which is the same as if the medium is lossless.
 
@@ -192,22 +204,24 @@ which is the same as if the medium is lossless.
 
 In this case \( \sigma \gg \omega \epsilon \) so that
 
-\begin{dmath}\label{eqn:uwavesLecture3:420}
+\begin{equation}\label{eqn:uwavesLecture3:420}
+\begin{aligned}
 \gamma
-=
+&=
 j \omega \sqrt{ \epsilon_{\mathrm{eff}} \mu }
-=
+\\ &=
 j \omega \sqrt{ \epsilon \mu } \lr{ 1 - j \frac{\sigma}{\omega \epsilon} }^{1/2}
 \approx
 j \omega \sqrt{ \epsilon \mu } \sqrt{- j \frac{\sigma}{\omega \epsilon} }
-=
+\\ &=
 j \omega \sqrt{ \epsilon \mu } \sqrt{\frac{\sigma}{\omega \epsilon} } e^{-j \pi/4}
-=
+\\ &=
 j \omega \sqrt{ \frac{ \mu \sigma}{2 \omega} } ( 1 - j )
-=
+\\ &=
 \sqrt{ \frac{ \mu \sigma \omega}{2 } } ( 1 + j )
-= \alpha + j \beta,
-\end{dmath}
+\\ &= \alpha + j \beta,
+\end{aligned}
+\end{equation}
 
 Hence
 
@@ -217,34 +231,40 @@ Hence
 
 Since \( \spacegrad \cross \BE = - \mu (j \omega) \BH \), and with a \( \BE \propto e^{-\gamma z } \) dependence, we have
 
-\begin{dmath}\label{eqn:uwavesLecture3:480}
-\eta_\txtc = \frac{\Abs{\BE}}{\Abs{\BH}} = \frac{- \mu (j \omega)}{-\gamma} = \frac{j \omega \mu}{\gamma}
-\end{dmath}
+\begin{equation}\label{eqn:uwavesLecture3:480}
+\begin{aligned}
+\eta_\txtc &= \frac{\Abs{\BE}}{\Abs{\BH}} \\ &= \frac{- \mu (j \omega)}{-\gamma} \\ &= \frac{j \omega \mu}{\gamma}
+\end{aligned}
+\end{equation}
 
 so
-\begin{dmath}\label{eqn:uwavesLecture3:460}
+\begin{equation}\label{eqn:uwavesLecture3:460}
+\begin{aligned}
 \eta_\txtc
-=
+&=
 \frac{j \omega \mu}{ \gamma}
-=
+\\ &=
 \frac{j \omega \mu}{
 \sqrt{ \frac{ \mu \sigma \omega}{2 } } ( 1 + j )
 }
-=
+\\ &=
 \frac{j (1 - j ) \omega \mu}{
 2 \sqrt{ \frac{ \mu \sigma \omega}{2 } }
 }
-=
+\\ &=
 (j + 1) \sqrt{ \frac{ \omega \mu }{ 2 \sigma} }
-=
+\\ &=
 (j + 1) \frac{\alpha}{\sigma}.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 The skin depth for a good conductor is
 
-\begin{dmath}\label{eqn:uwavesLecture3:500}
-\delta_\txts = \inv{\alpha} = \sqrt{\frac{2}{ \omega \mu \sigma } } = \inv{\sqrt{\pi f \mu \sigma}}.
-\end{dmath}
+\begin{equation}\label{eqn:uwavesLecture3:500}
+\begin{aligned}
+\delta_\txts &= \inv{\alpha} \\ &= \sqrt{\frac{2}{ \omega \mu \sigma } } \\ &= \inv{\sqrt{\pi f \mu \sigma}}.
+\end{aligned}
+\end{equation}
 
 \makeexample{Copper skin depth.}{example:uwavesLecture3:1}{
 Copper has a conductivity of \( \sigma = 5.8 \times 10^7 \si{S/m} \).  What is the skin depth
@@ -269,9 +289,9 @@ At DC the current through a wire flows uniformly throughout the entire cross sec
 
 The current occupies the entire cross section \( \pi b^2 \), so the DC resistance is
 
-\begin{dmath}\label{eqn:uwavesLecture3:540}
+\begin{equation}\label{eqn:uwavesLecture3:540}
 R_{\textrm{DC}} = \inv{\sigma} \frac{l}{\pi b^2}.
-\end{dmath}
+\end{equation}
 
 However, with RF (like microwave) signals the current only exists effectively within on skin depth, as sketched in \cref{fig:deck3Lossy:deck3LossyFig3}.
 
@@ -279,15 +299,15 @@ However, with RF (like microwave) signals the current only exists effectively wi
 
 therefore the RF resistance is
 
-\begin{dmath}\label{eqn:uwavesLecture3:560}
+\begin{equation}\label{eqn:uwavesLecture3:560}
 R_{\textrm{RF}} = \inv{\sigma} \frac{l}{2 \pi b \delta_\txts}.
-\end{dmath}
+\end{equation}
 
 Since \( A_{\textrm{RF}} \ll A = \pi b^2 \),
 
-\begin{dmath}\label{eqn:uwavesLecture3:580}
+\begin{equation}\label{eqn:uwavesLecture3:580}
 R_{\textrm{RF}} \gg R_{\textrm{DC}}.
-\end{dmath}
+\end{equation}
 
 Wires become very lossy at microwave frequencies.
 
@@ -295,15 +315,17 @@ Wires become very lossy at microwave frequencies.
 
 Consider a copper wire with \( \sigma = 5.8 \times 10^7 \si{S/m} \) of radius \( b = 0.5 \si{mm} \) and length \( 10 \si{m} \).  Find the DC and RF resistance at \( 1, 3 \) and \( 10 \si{GHz} \).  The DC resistance is
 
-\begin{dmath}\label{eqn:uwavesLecture3:520}
-R_{\textrm{DC}} = \inv{\sigma} \frac{l}{\pi b^2} = \frac{ 10 } { 5.8 \times 10^7 \times \pi (0.0005)^2 } = 0.22 \Omega.
-\end{dmath}
+\begin{equation}\label{eqn:uwavesLecture3:520}
+\begin{aligned}
+R_{\textrm{DC}} &= \inv{\sigma} \frac{l}{\pi b^2} \\ &= \frac{ 10 } { 5.8 \times 10^7 \times \pi (0.0005)^2 } \\ &= 0.22 \Omega.
+\end{aligned}
+\end{equation}
 
 On the other hand
 
-\begin{dmath}\label{eqn:uwavesLecture3:600}
+\begin{equation}\label{eqn:uwavesLecture3:600}
 R_{\textrm{RF}} = \inv{\sigma} \frac{l}{2 \pi b \delta_s}.
-\end{dmath}
+\end{equation}
 
 So, at
 

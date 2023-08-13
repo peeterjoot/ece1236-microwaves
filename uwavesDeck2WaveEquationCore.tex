@@ -29,37 +29,39 @@ Here \( \BJ = \sigma \BE \) is considered to be an induced current, and the \( \
 
 From Faraday's law \cref{eqn:uwavesLecture2:40}
 
-\begin{dmath}\label{eqn:uwavesLecture2:120}
+\begin{equation}\label{eqn:uwavesLecture2:120}
+\begin{aligned}
 \spacegrad \cross \lr{ \spacegrad \cross \BE }
-= - \mu \PD{t}{} \lr { \spacegrad \cross \BH }
-= - \mu \PD{t}{} \lr { \sigma + \epsilon \PD{t}{} } \BE
-= - \mu \sigma \PD{t}{\BE} - \epsilon \mu \PDSq{t}{\BE}.
-\end{dmath}
+&= - \mu \PD{t}{} \lr { \spacegrad \cross \BH }
+\\ &= - \mu \PD{t}{} \lr { \sigma + \epsilon \PD{t}{} } \BE
+\\ &= - \mu \sigma \PD{t}{\BE} - \epsilon \mu \PDSq{t}{\BE}.
+\end{aligned}
+\end{equation}
 
 We can also use the vector identity
 
-\begin{dmath}\label{eqn:uwavesLecture2:140}
+\begin{equation}\label{eqn:uwavesLecture2:140}
 \spacegrad \cross \lr{ \spacegrad \cross \BF } = \spacegrad \lr{ \spacegrad \cdot \BF } - \spacegrad^2 \BF,
-\end{dmath}
+\end{equation}
 
 so
-\begin{dmath}\label{eqn:uwavesLecture2:160}
+\begin{equation}\label{eqn:uwavesLecture2:160}
 \spacegrad \cross \lr{ \spacegrad \cross \BE }
 =
 \spacegrad \lr{ \cancel{\spacegrad \cdot \BE} } - \spacegrad^2 \BE,
-\end{dmath}
+\end{equation}
 
 or
-\begin{dmath}\label{eqn:uwavesLecture2:180}
+\begin{equation}\label{eqn:uwavesLecture2:180}
 0 = \spacegrad^2 \BE - \mu \sigma \PD{t}{\BE} - \epsilon \mu \PDSq{t}{\BE}.
-\end{dmath}
+\end{equation}
 
 The \( \mu \sigma \PDi{t}{\BE} \) term is a damping contribution.
 
 Similarly for the magnetic field
-\begin{dmath}\label{eqn:uwavesLecture2:200}
+\begin{equation}\label{eqn:uwavesLecture2:200}
 0 = \spacegrad^2 \BH - \mu \sigma \PD{t}{\BH} - \epsilon \mu \PDSq{t}{\BH}.
-\end{dmath}
+\end{equation}
 
 This is the wave or Helmholtz equation.
 \index{Helmholtz equation}
@@ -67,12 +69,12 @@ This is the wave or Helmholtz equation.
 Note that for the no loss condition \( \sigma = 0 \), we have the undamped wave equations
 \begin{subequations}
 \label{eqn:uwavesLecture2:220}
-\begin{dmath}\label{eqn:uwavesLecture2:240}
+\begin{equation}\label{eqn:uwavesLecture2:240}
 \spacegrad^2 \BE = \epsilon \mu \PDSq{t}{\BE}.
-\end{dmath}
-\begin{dmath}\label{eqn:uwavesLecture2:260}
+\end{equation}
+\begin{equation}\label{eqn:uwavesLecture2:260}
 \spacegrad^2 \BH = \epsilon \mu \PDSq{t}{\BH}.
-\end{dmath}
+\end{equation}
 \end{subequations}
 
 This is one wave equation for each of \( E_x, E_y, E_z, H_x, H_y\) and \( H_z \).
@@ -81,19 +83,19 @@ This is one wave equation for each of \( E_x, E_y, E_z, H_x, H_y\) and \( H_z \)
 \index{propagation!one direction}
 
 Consider the undamped propagation along the z direction of \( E_x(z, t) \), which must satisfy
-\begin{dmath}\label{eqn:uwavesLecture2:400}
+\begin{equation}\label{eqn:uwavesLecture2:400}
 \spacegrad^2 E_x = \epsilon \mu \PDSq{t}{E_x},
-\end{dmath}
+\end{equation}
 
 or
-\begin{dmath}\label{eqn:uwavesLecture2:420}
+\begin{equation}\label{eqn:uwavesLecture2:420}
 \PDSq{z}{E_x} = \epsilon \mu \PDSq{t}{E_x}.
-\end{dmath}
+\end{equation}
 
 This is analogous to the voltage transmission line equation
-\begin{dmath}\label{eqn:uwavesLecture2:440}
+\begin{equation}\label{eqn:uwavesLecture2:440}
 \PDSq{z}{V} = L C \PDSq{t}{V},
-\end{dmath}
+\end{equation}
 
 With solution
 
@@ -129,11 +131,13 @@ where \( \BE_0 \) is a constant vector, so this describes a wave propagation in 
 
 For source free media, we have
 
-\begin{dmath}\label{eqn:uwavesLecture2:340}
+\begin{equation}\label{eqn:uwavesLecture2:340}
+\begin{aligned}
 \spacegrad \cdot ( \BE_0 f )
-= \spacegrad f \cdot \BE_0 + f \cancel{ \spacegrad \cdot \BE }
-= (\zcap f') \cdot \BE_0.
-\end{dmath}
+&= \spacegrad f \cdot \BE_0 + f \cancel{ \spacegrad \cdot \BE }
+\\ &= (\zcap f') \cdot \BE_0.
+\end{aligned}
+\end{equation}
 
 Because \( \BE_0 \cdot \zcap = 0 \), the vector \( \BE_0 \) is perpendicular to the direction of propagation ( z ).  The next task is to find the magnetic field that couples to this electric field solution.  Suppose the coordinate axis are picked so that
 
@@ -142,48 +146,54 @@ Because \( \BE_0 \cdot \zcap = 0 \), the vector \( \BE_0 \) is perpendicular to 
 \end{equation}
 
 Using Faraday's law \( \spacegrad \cross \BE = -\mu \PDi{t}{\BH} \) gives
-\begin{dmath}\label{eqn:uwavesLecture2:380}
+\begin{equation}\label{eqn:uwavesLecture2:380}
+\begin{aligned}
 \spacegrad \cross (\BE_0 E_x)
-=
+&=
 (\spacegrad \cross \BE_0) E_x
 -\BE_0 \cross \spacegrad E_x
-=
+\\ &=
 -\BE_0 \cross \spacegrad E_x
-=
+\\ &=
 -\BE_0 \cross \zcap \PD{z}{E_x},
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 so
 
-\begin{dmath}\label{eqn:uwavesLecture2:460}
+\begin{equation}\label{eqn:uwavesLecture2:460}
 -\mu \PD{t}{\BH} =
 \lr{ \zcap \cross \BE_0 } \PD{z}{E_x}.
-\end{dmath}
+\end{equation}
 
 Because of the \( E_x( z \pm v_\phi t ) \) dependence on \( z, t \), we must have
 
-\begin{dmath}\label{eqn:uwavesLecture2:480}
+\begin{equation}\label{eqn:uwavesLecture2:480}
 \PD{z}{E_x} = \pm \inv{v_\phi} \PD{t}{E_x},
-\end{dmath}
+\end{equation}
 
 or
-\begin{dmath}\label{eqn:uwavesLecture2:500}
--\mu \PD{t}{\BH} =
+\begin{equation}\label{eqn:uwavesLecture2:500}
+\begin{aligned}
+-\mu \PD{t}{\BH} &=
 \lr{ \zcap \cross \BE_0 }
-= \pm \inv{v_\phi} \PD{t}{E_x}.
-\end{dmath}
+\\ &= \pm \inv{v_\phi} \PD{t}{E_x}.
+\end{aligned}
+\end{equation}
 
 Integrating with respect to \( t \) and assuming a zero integration constant (physical justification for that?), we have
 
-\begin{dmath}\label{eqn:uwavesLecture2:520}
+\begin{equation}\label{eqn:uwavesLecture2:520}
 \BH = \mp E_x(z, t) \frac{\zcap \cross \BE_0}{v_\phi \mu}.
-\end{dmath}
+\end{equation}
 
 The \( v_\phi \mu \) product is the intrinsic wave impedance of the medium
 
-\begin{dmath}\label{eqn:uwavesLecture2:540}
-v_\phi \mu = \frac{\mu}{\sqrt{\epsilon\mu}} = \sqrt{\frac{\mu}{\epsilon}} = \eta.
-\end{dmath}
+\begin{equation}\label{eqn:uwavesLecture2:540}
+\begin{aligned}
+v_\phi \mu &= \frac{\mu}{\sqrt{\epsilon\mu}} \\ &= \sqrt{\frac{\mu}{\epsilon}} \\ &= \eta.
+\end{aligned}
+\end{equation}
 
 The magnetic field can be written in terms of the propagation direction \( \ncap = \mp \zcap \) has
 
@@ -417,30 +427,32 @@ Notes
 \end{equation}
 
 or
-\begin{dmath}\label{eqn:uwavesDeck2WaveEquationCore:1500}
+\begin{equation}\label{eqn:uwavesDeck2WaveEquationCore:1500}
 v_\phi = \frac{\omega}{\beta}.
-\end{dmath}
+\end{equation}
 
 Since \( \beta z - \omega t = \beta ( z - v_\phi t ) = \textrm{constant} \) we also have
 
-\begin{dmath}\label{eqn:uwavesDeck2WaveEquationCore:1520}
+\begin{equation}\label{eqn:uwavesDeck2WaveEquationCore:1520}
 \frac{dz}{dt} - v_\phi = 0,
-\end{dmath}
+\end{equation}
 
 or
 
-\begin{dmath}\label{eqn:uwavesDeck2WaveEquationCore:1540}
+\begin{equation}\label{eqn:uwavesDeck2WaveEquationCore:1540}
 v_\phi = \frac{\lambda}{T}.
-\end{dmath}
+\end{equation}
 
 These can be combined to give
-\begin{dmath}\label{eqn:uwavesDeck2WaveEquationCore:1560}
+\begin{equation}\label{eqn:uwavesDeck2WaveEquationCore:1560}
+\begin{aligned}
 \beta
-= \frac{\omega}{v_\phi}
-= \frac{\omega T}{\lambda}
-= \frac{2 \pi f T}{\lambda}
-= \frac{2 \pi}{\lambda}.
-\end{dmath}
+&= \frac{\omega}{v_\phi}
+\\ &= \frac{\omega T}{\lambda}
+\\ &= \frac{2 \pi f T}{\lambda}
+\\ &= \frac{2 \pi}{\lambda}.
+\end{aligned}
+\end{equation}
 
 \end{itemize}
 
@@ -472,14 +484,15 @@ where \( \bcE \) and \( \bcH \) are time-dependent fields.  For time harmonic fi
 
 Hence
 
-\begin{dmath}\label{eqn:uwavesLecture2:1160}
+\begin{equation}\label{eqn:uwavesLecture2:1160}
+\begin{aligned}
 \BP
-= \bcE \cross \bcH
-= \inv{4}
+&= \bcE \cross \bcH
+\\ &= \inv{4}
 \lr{ \BE e^{j \omega t} +  \BE^\conj e^{-j \omega t} }
 \cross
 \lr{ \BH e^{j \omega t} +  \BH^\conj e^{-j \omega t} }
-=
+\\ &=
 \inv{4}
 \lr{
 (\BE \cross \BH) e^{2 j \omega t}
@@ -487,7 +500,8 @@ Hence
 + (\BE \cross \BH^\conj)
 (\BE^\conj \cross \BH^\conj) e^{-2 j \omega t}
 }.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 Therefore the time-average Poynting vector is
 
@@ -536,30 +550,34 @@ Hence
 
 Now integrate over V, using the divergence theorem
 
-\begin{dmath}\label{eqn:uwavesLecture2:1280}
+\begin{equation}\label{eqn:uwavesLecture2:1280}
+\begin{aligned}
 \int_V
 \spacegrad \cdot \lr{ \BE \cross \BH^\conj } dV
-=
+&=
 \oint \lr{ \BE \cross \BH^\conj } \cdot d\BS
-=
+\\ &=
 - \sigma \int_V \Abs{\BE}^2 dV
 + j \omega \int_V \lr{ \epsilon^\conj \Abs{\BE}^2 -\mu \Abs{\BH}^2 } dV
 - \int_V \BJ_\txts^\conj \cdot \BE dV,
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 or
-\begin{dmath}\label{eqn:uwavesLecture2:1300}
+\begin{equation}\label{eqn:uwavesLecture2:1300}
+\begin{aligned}
 -\inv{2} \int_V \BJ_\txts^\conj \cdot \BE dV,
-=
+&=
 + \inv{2} \oint \lr{ \BE \cross \BH^\conj } \cdot d\BS
 + \frac{\sigma}{2} \int_V \Abs{\BE}^2 dV
 - j \frac{\omega}{2} \int_V \lr{ \epsilon^\conj \Abs{\BE}^2 -\mu \Abs{\BH}^2 } dV
-=
+\\ &=
 + \inv{2} \oint \lr{ \BE \cross \BH^\conj } \cdot d\BS
 + \frac{\sigma}{2} \int_V \Abs{\BE}^2 dV
 + \frac{\omega}{2} \int_V \lr{ \epsilon'' \Abs{\BE}^2 + \mu'' \Abs{\BH}^2 } dV
 + j \frac{\omega}{2} \int_V \lr{ -\epsilon' \Abs{\BE}^2 + \mu' \Abs{\BH}^2 } dV
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 This is the mathematical manifestation of Poynting's theorem which is nothing else but the conservation of power with volume V.  We can now identify the following terms:
 

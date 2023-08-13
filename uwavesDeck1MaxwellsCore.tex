@@ -10,15 +10,15 @@ For the integration surface sketched in \cref{fig:deck1Maxwells:deck1MaxwellsFig
 
 \imageFigure{../figures/ece1236-microwaves/deck1MaxwellsFig1}{Stokes integration surface}{fig:deck1Maxwells:deck1MaxwellsFig1}{0.2}
 
-\begin{dmath}\label{eqn:uwavesLecture1:20}
+\begin{equation}\label{eqn:uwavesLecture1:20}
 \int_\txtC \BE \cdot d\Bl = - \PD{t}{} \iint_\txtS \BB \cdot \ncap dS
-\end{dmath}
+\end{equation}
 
 \paragraph{Ampere's law}
 \index{Ampere's law}
-\begin{dmath}\label{eqn:uwavesLecture1:40}
+\begin{equation}\label{eqn:uwavesLecture1:40}
 \int \BH \cdot d\Bl = \iint \BJ \cdot \ncap dS + \PD{t}{} \iint \BD \cdot \ncap dS
-\end{dmath}
+\end{equation}
 
 On the RHS we have the sum of the conduction and displacement currents respectively.
 
@@ -41,29 +41,29 @@ Consider a closed surface S with interior volume V, as sketched in \cref{fig:dec
 
 \imageFigure{../figures/ece1236-microwaves/deck1MaxwellsFig2}{Divergence theorem integration volume}{fig:deck1Maxwells:deck1MaxwellsFig2}{0.2}
 
-\begin{dmath}\label{eqn:uwavesLecture1:60}
+\begin{equation}\label{eqn:uwavesLecture1:60}
 \oiint \BJ \cdot \ncap dS = -\PD{t}{} \int \rho dV
-\end{dmath}
+\end{equation}
 
 \paragraph{Maxwell's equations in integral form}
 \index{Maxwell's equations!integral form}
 
 Faraday's
-\begin{dmath}\label{eqn:uwavesLecture1:80}
+\begin{equation}\label{eqn:uwavesLecture1:80}
 \int_\txtC \BE \cdot d\Bl = - \PD{t}{} \iint_\txtS \BB \cdot \ncap dS
-\end{dmath}
+\end{equation}
 
 Ampere-Maxwell's law:
 
-\begin{dmath}\label{eqn:uwavesLecture1:100}
+\begin{equation}\label{eqn:uwavesLecture1:100}
 \int \BH \cdot d\Bl = \iint \BJ \cdot \ncap dS + \PD{t}{} \iint \BD \cdot \ncap dS
-\end{dmath}
+\end{equation}
 
 Charge conservation:
 
-\begin{dmath}\label{eqn:uwavesLecture1:120}
+\begin{equation}\label{eqn:uwavesLecture1:120}
 \oiint \BJ \cdot \ncap dS = -\PD{t}{} \int \rho dV
-\end{dmath}
+\end{equation}
 
 \section{Maxwell's equations in differential form}
 \index{Maxwell's equations!differential}
@@ -75,9 +75,9 @@ Useful calculus theorems
 
 For the integration surface sketched in \cref{fig:deck1Maxwells:deck1MaxwellsFig1} the 3D Stokes theorem statement is
 
-\begin{dmath}\label{eqn:uwavesLecture1:140}
+\begin{equation}\label{eqn:uwavesLecture1:140}
 \oint_\txtC \BF \cdot d\Bl = \iint_\txtS \lr{ \spacegrad \cross \BF } \cdot \ncap dS
-\end{dmath}
+\end{equation}
 
 \paragraph{Gauss's theorem (divergence theorem)}
 \index{Gauss's theorem}
@@ -85,9 +85,9 @@ For the integration surface sketched in \cref{fig:deck1Maxwells:deck1MaxwellsFig
 
 Integrating over a closed surface
 
-\begin{dmath}\label{eqn:uwavesLecture1:160}
+\begin{equation}\label{eqn:uwavesLecture1:160}
 \oiint \BF \cdot \ncap dS = \iiint \spacegrad \cdot \BF dV
-\end{dmath}
+\end{equation}
 
 \begin{itemize}
 \item \( \spacegrad f \) :  vector ( \( f \) is a scalar ) : Gradient of a scalar.
@@ -100,20 +100,22 @@ Integrating over a closed surface
 
 Referring again to \cref{fig:deck1Maxwells:deck1MaxwellsFig1}, and Stokes theorem, Faraday's law
 
-\begin{dmath}\label{eqn:uwavesLecture1:180}
+\begin{equation}\label{eqn:uwavesLecture1:180}
 \oint_\txtC \BE \cdot d\Bl = - \PD{t}{} \iint_\txtS \BB \cdot \ncap dS
-\end{dmath}
+\end{equation}
 
 can be expressed using Stokes's theorem as
 
-\begin{dmath}\label{eqn:uwavesLecture1:200}
-\oint_\txtC \BE \cdot d\Bl = \iint_\txtS \lr{ \spacegrad \cross \BE} \cdot \ncap d\BS
-=
+\begin{equation}\label{eqn:uwavesLecture1:200}
+\begin{aligned}
+\oint_\txtC \BE \cdot d\Bl &= \iint_\txtS \lr{ \spacegrad \cross \BE} \cdot \ncap d\BS
+\\ &=
 - \PD{t}{} \iint_\txtS \BB \cdot \ncap dS.
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 Hence
-\begin{dmath}\label{eqn:uwavesLecture1:220}
+\begin{equation}\label{eqn:uwavesLecture1:220}
 \oint_\txtC
 \lr{
 \spacegrad \cross \BE
@@ -121,47 +123,49 @@ Hence
 }
 \cdot \ncap dS
 = 0,
-\end{dmath}
+\end{equation}
 
 or
 
-\begin{dmath}\label{eqn:uwavesLecture1:240}
+\begin{equation}\label{eqn:uwavesLecture1:240}
 \spacegrad \cross \BE = -\PD{t}{\BB},
-\end{dmath}
+\end{equation}
 
 which is Faraday's law in differential form.
 
 Similarly, Ampere's law in differential form is
 
-\begin{dmath}\label{eqn:uwavesLecture1:260}
+\begin{equation}\label{eqn:uwavesLecture1:260}
 \spacegrad \cross \BH = \BJ + \PD{t}{\BD}.
-\end{dmath}
+\end{equation}
 
 \paragraph{Charge conservation law}
 \index{charge conservation}
 
 Starting with
 
-\begin{dmath}\label{eqn:uwavesLecture1:280}
+\begin{equation}\label{eqn:uwavesLecture1:280}
 \oiint \BJ \cdot \ncap dS = -\PD{t}{} \int \rho dV,
-\end{dmath}
+\end{equation}
 
 and using Gauss's theorem
-\begin{dmath}\label{eqn:uwavesLecture1:300}
-\oiint  \BJ \cdot \ncap dS = \int_\txtV \spacegrad \cdot \BJ dV =
+\begin{equation}\label{eqn:uwavesLecture1:300}
+\begin{aligned}
+\oiint  \BJ \cdot \ncap dS &= \int_\txtV \spacegrad \cdot \BJ dV \\ &=
 -\PD{t}{} \int \rho dV,
-\end{dmath}
+\end{aligned}
+\end{equation}
 
 or
-\begin{dmath}\label{eqn:uwavesLecture1:320}
+\begin{equation}\label{eqn:uwavesLecture1:320}
 \int_\txtV \lr{
 \spacegrad \cdot \BJ +\PD{t}{\rho }} dV = 0.
-\end{dmath}
+\end{equation}
 
 Hence
-\begin{dmath}\label{eqn:uwavesLecture1:340}
+\begin{equation}\label{eqn:uwavesLecture1:340}
 \spacegrad \cdot \BJ = -\PD{t}{\rho}.
-\end{dmath}
+\end{equation}
 
 \paragraph{Summary: Maxwell's equations in differential form}
 
@@ -169,64 +173,68 @@ Faraday's law, Ampere-Maxwell law, and charge conservation law respectively:
 
 \begin{subequations}
 \label{eqn:uwavesLecture1:360}
-\begin{dmath}\label{eqn:uwavesLecture1:380}
+\begin{equation}\label{eqn:uwavesLecture1:380}
 \spacegrad \cross \BE = -\PD{t}{\BB}
-\end{dmath}
-\begin{dmath}\label{eqn:uwavesLecture1:400}
+\end{equation}
+\begin{equation}\label{eqn:uwavesLecture1:400}
 \spacegrad \cross \BH = \BJ + \PD{t}{\BD}
-\end{dmath}
-\begin{dmath}\label{eqn:uwavesLecture1:420}
+\end{equation}
+\begin{equation}\label{eqn:uwavesLecture1:420}
 \spacegrad \cdot \BJ = - \PD{t}{\rho}
-\end{dmath}
+\end{equation}
 \end{subequations}
 
 \paragraph{Derived laws}
 
 Provides a vector \( \BF \) has second derivatives that commute, we must have
 
-\begin{dmath}\label{eqn:uwavesLecture1:440}
+\begin{equation}\label{eqn:uwavesLecture1:440}
 \spacegrad \cdot \lr{ \spacegrad \cross \BF } = 0,
-\end{dmath}
+\end{equation}
 
 Faraday's law
 
-\begin{dmath}\label{eqn:uwavesLecture1:460}
+\begin{equation}\label{eqn:uwavesLecture1:460}
 \spacegrad \cross \BE = -\PD{t}{\BB}
-\end{dmath}
+\end{equation}
 
 for a continuous electric field \( \BE \) gives
 \index{electric field!divergence}
 
-\begin{dmath}\label{eqn:uwavesLecture1:480}
-\spacegrad \cdot \lr{ \spacegrad \cross \BE } = -\PD{t}{} \spacegrad \cdot \BB = 0.
-\end{dmath}
+\begin{equation}\label{eqn:uwavesLecture1:480}
+\begin{aligned}
+\spacegrad \cdot \lr{ \spacegrad \cross \BE } &= -\PD{t}{} \spacegrad \cdot \BB \\ &= 0.
+\end{aligned}
+\end{equation}
 
 \index{magnetic field!divergence}
 The divergence must be independent of time or constant.  If constant, we can probably assume that a non-zero constant isn't physically relevant, in which case we would have
 
-\begin{dmath}\label{eqn:uwavesLecture1:500}
+\begin{equation}\label{eqn:uwavesLecture1:500}
 \spacegrad \cdot \BB = 0.
-\end{dmath}
+\end{equation}
 
 Similarly, Ampere's law gives
 
-\begin{dmath}\label{eqn:uwavesLecture1:520}
-0 = \spacegrad \cdot \lr{ \spacegrad \cross \BH }
-= \spacegrad \cdot \lr{ \BJ + \PD{t}{\BD} }
-= - \PD{t}{\rho} + \PD{t}{} \spacegrad \cdot \BD,
-\end{dmath}
+\begin{equation}\label{eqn:uwavesLecture1:520}
+\begin{aligned}
+0 &= \spacegrad \cdot \lr{ \spacegrad \cross \BH }
+\\ &= \spacegrad \cdot \lr{ \BJ + \PD{t}{\BD} }
+\\ &= - \PD{t}{\rho} + \PD{t}{} \spacegrad \cdot \BD,
+\end{aligned}
+\end{equation}
 
 where the last line follows from charge conservation.  This means that the quantity
 
-\begin{dmath}\label{eqn:uwavesLecture1:540}
+\begin{equation}\label{eqn:uwavesLecture1:540}
 -\rho + \spacegrad \cdot \BD,
-\end{dmath}
+\end{equation}
 
 is constant or independent of time.  Again, assuming a non-zero constant value or time independent value isn't physically relevant, we have
 
-\begin{dmath}\label{eqn:uwavesLecture1:560}
+\begin{equation}\label{eqn:uwavesLecture1:560}
 \spacegrad \cdot \BD = \rho.
-\end{dmath}
+\end{equation}
 
 Comment: Peeter: It is interesting to see \( \spacegrad \cdot \BB = 0\), and \( \spacegrad \cdot \BD = \rho \) presented as derived values, but it seems to me that some hand waving through the time independent and non-zero constant cases is required to get there.
 
@@ -236,27 +244,27 @@ Independent equations, Faraday's, Ampere-Maxwell, and charge conservation:
 
 \begin{subequations}
 \label{eqn:uwavesLecture1:580}
-\begin{dmath}\label{eqn:uwavesLecture1:600}
+\begin{equation}\label{eqn:uwavesLecture1:600}
 \spacegrad \cross \BE = -\PD{t}{\BB}
-\end{dmath}
-\begin{dmath}\label{eqn:uwavesLecture1:620}
+\end{equation}
+\begin{equation}\label{eqn:uwavesLecture1:620}
 \spacegrad \cross \BH = \BJ + \PD{t}{\BD}
-\end{dmath}
-\begin{dmath}\label{eqn:uwavesLecture1:640}
+\end{equation}
+\begin{equation}\label{eqn:uwavesLecture1:640}
 \spacegrad \cdot \BJ = - \PD{t}{\rho}
-\end{dmath}
+\end{equation}
 \end{subequations}
 
 Derived equations (no magnetic charges, and Gauss's law respectively),
 
 \begin{subequations}
 \label{eqn:uwavesLecture1:660}
-\begin{dmath}\label{eqn:uwavesLecture1:680}
+\begin{equation}\label{eqn:uwavesLecture1:680}
 \spacegrad \cdot \BB = 0
-\end{dmath}
-\begin{dmath}\label{eqn:uwavesLecture1:700}
+\end{equation}
+\begin{equation}\label{eqn:uwavesLecture1:700}
 \spacegrad \cdot \BD = \rho
-\end{dmath}
+\end{equation}
 \end{subequations}
 
 Note can consider Gauss's law as the third independent equation, in which case the charge conservation law becomes a derived law.
@@ -334,27 +342,27 @@ Here \( \BD \) is not parallel with \( \BE \), and
 \begin{itemize}
 \item Crystals in the principle axis coordinate system can be described by diagonal tensors of the form
 
-\begin{dmath}\label{eqn:uwavesLecture1:820}
+\begin{equation}\label{eqn:uwavesLecture1:820}
 \overbar{\Bepsilon} =
 \begin{bmatrix}
 \epsilon_x & 0 & 0 \\
 0 & \epsilon_y & 0 \\
 0 & 0 & \epsilon_z \\
 \end{bmatrix}.
-\end{dmath}
+\end{equation}
 
 This is electric anisotropy.
 
 \item Uniaxial crystals where \( \epsilon_x = \epsilon_y \), so that
 
-\begin{dmath}\label{eqn:uwavesLecture1:840}
+\begin{equation}\label{eqn:uwavesLecture1:840}
 \overbar{\Bepsilon} =
 \begin{bmatrix}
 \epsilon & 0 & 0 \\
 0 & \epsilon & 0 \\
 0 & 0 & \epsilon_z \\
 \end{bmatrix}.
-\end{dmath}
+\end{equation}
 
 The z axis is the optical axis.
 Positive uniaxial crystal if \( \epsilon_z > \epsilon \) and
