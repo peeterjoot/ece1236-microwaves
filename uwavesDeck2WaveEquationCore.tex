@@ -4,7 +4,6 @@
 %
 \section{Plane waves}
 \index{plane wave}
-
 In simple media with no sources
 
 \begin{subequations}
@@ -468,13 +467,12 @@ Consider a volume V, surrounded by a closed surface S as sketched in \cref{fig:d
 
 \index{instantaneous power density}
 The instantaneous power density outflowing the surfaces S s given by the Poynting vector
-
+% chatgpt says E H has units of Watts/m^3.  check this manually:
+% also check: uwavesLecture2:1180
 \begin{equation}\label{eqn:uwavesLecture2:1120}
 \BP = \bcE \cross \bcH, \qquad (\si{W/m^2}),
 \end{equation}
-
 where \( \bcE \) and \( \bcH \) are time-dependent fields.  For time harmonic fields
-
 \begin{equation}\label{eqn:uwavesLecture2:1140}
 \begin{aligned}
 \bcE &= \Real \lr{ \BE e^{j \omega t} } \\
@@ -483,7 +481,6 @@ where \( \bcE \) and \( \bcH \) are time-dependent fields.  For time harmonic fi
 \end{equation}
 
 Hence
-
 \begin{equation}\label{eqn:uwavesLecture2:1160}
 \begin{aligned}
 \BP
@@ -511,7 +508,6 @@ Therefore the time-average Poynting vector is
 }
 
 The total time-average power outflowing S is
-
 \begin{equation}\label{eqn:uwavesLecture2:1200}
 P = \inv{2} \oint \Real\lr{ \BE \cross \BH^\conj } \cdot d\BS.
 \end{equation}

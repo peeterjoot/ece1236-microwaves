@@ -17,7 +17,6 @@ W_m = \inv{4} \Abs{I}^2 L
 
 Average stored electric energy
 \index{energy!stored electric}
-
 \begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:60}
 \begin{aligned}
 W_e
@@ -28,13 +27,10 @@ W_e
 
 \index{resonance}
 At resonance \( W_m = W_e \) or
-
 \begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:80}
 L = \inv{\omega_0^2 C}
 \end{equation}
-
 and
-
 \begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:100}
 \omega_0 = \inv{\sqrt{L C}}
 \end{equation}
@@ -47,24 +43,21 @@ Q &= \omega_0 \frac{\textrm{average stored energy}}{\textrm{energy loss/second}}
 \end{equation}
 
 At resonance,  \( W_m = W_e = \inv{4} \Abs{I}^2 L\), so
-
 \begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:140}
 \begin{aligned}
 Q
 &= \omega_0 \frac{\inv{2} \Abs{I}^2 L}{\inv{2} \Abs{I}^2 R}
 \\ &= \omega_0 \frac{L}{R}
-\\ &= \frac{X}{R}
+\\ &= \frac{X}{R}.
 \end{aligned}
 \end{equation}
 
 High Q, means that we have low losses, but is also a measure of the bandwidth.
-
 \paragraph{Bandwith of resonators and Q-factor}
 \index{resonator bandwith}
 \index{Q-factor}
 
 To see why this measures the bandwidth, lets find the impedance
-
 \begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:160}
 \begin{aligned}
 Z_{\textrm{in}}
@@ -73,15 +66,12 @@ Z_{\textrm{in}}
 \\ &= R + j \omega L \frac{\omega^2 - \omega_0^2}{\omega^2},
 \end{aligned}
 \end{equation}
-
 where the resonant frequency is
-
 \begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:180}
 \omega_0 = \inv{\sqrt{LC}}
 \end{equation}
 
 Also,
-
 \begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:200}
 \begin{aligned}
 \omega^2 - \omega_0^2 &= \lr{ \omega - \omega_0 }\lr{ \omega + \omega_0 }
@@ -100,23 +90,17 @@ BW = \frac{2 \Delta \omega}{\omega_0}
 \begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:240}
 Z_{\textrm{in}} = R + j R Q BW,
 \end{equation}
-
 gives
-
 \begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:260}
 \begin{aligned}
 \Abs{Z_{\textrm{in}}}^2 &= R^2\lr{ 1 + Q^2 BW^2 } \\ &= 2 R^2,
 \end{aligned}
 \end{equation}
-
 or
-
 \begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:280}
 Q^2 BW^2 = 1,
 \end{equation}
-
 or
-
 \begin{equation}\label{eqn:uwavesDeck8ResonatorQfactorCore:300}
 BW = \inv{Q}
 \end{equation}
@@ -150,10 +134,8 @@ whereas printing on a CMOS grade silicon substrate, you may get a \(Q \sim 10\).
 F5
 
 In optics you may find really high Q's (say 10000).  The reason is that \( X \) value is huge because the structure can be made many wavelengths in size.
-
 \paragraph{Q-Factor for a capacitor}
 \index{capacitor!Q-Factor}
-
 series case:
 
 F6
@@ -169,7 +151,6 @@ Q &= \frac{X_c}{R} \\ &= \inv{\omega R C}
 \end{equation}
 
 Parallel (shunt) case:
-
 \end{dmath}
 Q
 = \omega \frac{ W_e + W_m }{P_L}

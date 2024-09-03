@@ -23,7 +23,6 @@
 \index{average power}
 
 In \citep{pozar2009microwave} \S 2.2 is a comparison of field energy expressions with their circuit equivalents.  It's clearly been too long since I've worked with circuits, because I'd forgotten all the circuit energy expressions:
-
 \begin{equation}\label{eqn:averagePowerCircuitElements:20}
 \begin{aligned}
 W_\txtR &= \frac{R}{2} \Abs{I}^2 \\
@@ -34,17 +33,13 @@ W_\txtG &= \frac{G}{2} \Abs{V}^2 \\
 \end{equation}
 
 Here's a recap of where these come from
-
 \paragraph{Energy lost to resistance}
 \index{resistance loss}
-
 Given
 \begin{equation}\label{eqn:averagePowerCircuitElements:40}
-v(t) = R i(t)
+v(t) = R i(t),
 \end{equation}
-
 the average power lost to a resistor is
-
 \begin{equation}\label{eqn:averagePowerCircuitElements:60}
 \begin{aligned}
 p_\txtR
@@ -67,12 +62,9 @@ dt
 \end{equation}
 
 Here it is assumed that the averaging is done over some integer multiple of the period, which kills off all the exponentials.
-
 \paragraph{Energy stored in a capacitor}
 \index{energy!capacitor}
-
 I tried the same sort of analysis for a capacitor in phasor form, but everything canceled out.  Referring to \citep{irwin2007bec}, the approach used to figure this out is to operate first strictly in the time domain.  Specifically, for the capacitor where \( i = C dv/dt \) the power supplied up to a time \( t \) is
-
 \begin{equation}\label{eqn:averagePowerCircuitElements:80}
 \begin{aligned}
 p_\txtC(t)
@@ -82,7 +74,6 @@ p_\txtC(t)
 \end{equation}
 
 The \( v^2(t) \) term can now be expanded in terms of phasors and averaged for
-
 \begin{equation}\label{eqn:averagePowerCircuitElements:100}
 \begin{aligned}
 \overbar{p}_\txtC
@@ -94,12 +85,9 @@ The \( v^2(t) \) term can now be expanded in terms of phasors and averaged for
 \\ &= \frac{C}{4} \Abs{V}^2.
 \end{aligned}
 \end{equation}
-
 \paragraph{Energy stored in an inductor}
 \index{energy!inductor}
-
 The inductor energy is found the same way, with
-
 \begin{equation}\label{eqn:averagePowerCircuitElements:120}
 \begin{aligned}
 p_\txtL(t)
@@ -107,25 +95,18 @@ p_\txtL(t)
 \\ &= \inv{2} L i^2(t),
 \end{aligned}
 \end{equation}
-
 which leads to
-
 \begin{equation}\label{eqn:averagePowerCircuitElements:140}
 \overbar{p}_\txtL
 = \frac{L}{4} \Abs{I}^2.
 \end{equation}
-
 \paragraph{Energy lost due to conductance}
 \index{energy!conductance}
-
 Finally, we have conductance.  In phasor space that is defined by
-
 \begin{equation}\label{eqn:averagePowerCircuitElements:160}
 G = \frac{I}{V} = \inv{R},
 \end{equation}
-
 so power lost due to conductance follows from power lost due to resistance.  In the average we have
-
 \begin{equation}\label{eqn:averagePowerCircuitElements:180}
 \begin{aligned}
 p_\txtG
@@ -134,6 +115,5 @@ p_\txtG
 \\ &= \frac{G}{2} \Abs{V}^2
 \end{aligned}
 \end{equation}
-
 %}
 %\EndArticle

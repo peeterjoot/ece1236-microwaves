@@ -21,27 +21,25 @@ For the general matching network sketched in
 F3
 
 it is left as a problem to show that
-
 \begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:40}
-P_\txtL = P_A \frac{
-\lr{ 1 - \Abs{\Gamma_\txtG}^2 }
-\lr{ 1 - \Abs{\Gamma_\txtL}^2 } }
-{
-\Abs{ 1 - \Gamma_\txtG \Gamma_\txtL e^{-2 j \beta l } }^2
+P_\txtL = P_A 
+\frac{
+   \lr{ 1 - \Abs{\Gamma_\txtG}^2 }
+   \lr{ 1 - \Abs{\Gamma_\txtL}^2 }
 }
+{
+   \Abs{ 1 - \Gamma_\txtG \Gamma_\txtL e^{-2 j \beta l } }^2
+}.
 \end{equation}
 
-for a matched line
-
+For a matched line
 \begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:60}
-P_\txtL = P_A
+P_\txtL = P_A.
 \end{equation}
 
 Matching cases
-
 \begin{enumerate}
 \item Line matched to load \( Z_\txtL' = Z_0 \), so that
-
 \begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:80}
 \begin{aligned}
 \Gamma_\txtL
@@ -51,13 +49,10 @@ Matching cases
 \end{equation}
 
 In this case,
-
 \begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:100}
 P_\txtL = P_A \lr{ 1 - \Abs{\Gamma_\txtG}^2 }
 \end{equation}
-
 \item With a line matched to generator, \( Z_\txtG' = Z_0 \), so
-
 \begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:120}
 \begin{aligned}
 \Gamma_\txtG
@@ -67,17 +62,13 @@ P_\txtL = P_A \lr{ 1 - \Abs{\Gamma_\txtG}^2 }
 \end{equation}
 
 Now we have
-
 \begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:140}
 P_\txtL = P_A \lr{ 1 - \Abs{\Gamma_\txtL}^2 }
 \end{equation}
-
 \item Line matched to both the load and the generator, with \( Z_\txtG' = Z_0, Z_\txtL' = Z_0 \),
 so that \( \Gamma_\txtG = \Gamma_\txtL = 0 \).
 In this case \( P_\txtL = P_A \) and there are reflections on the line.
-
 \item With conjugate matching, where \( Z_{\textrm{in}} = Z_\txtG^\conj \), we have
-
 \begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:160}
 \begin{aligned}
 \Gamma_\txtG
@@ -87,18 +78,15 @@ In this case \( P_\txtL = P_A \) and there are reflections on the line.
 \end{equation}
 
 FIXME: this part of his notes doesn't make sense.
-
 \end{enumerate}
 
 \section{Matching with lumped elements}
 \index{lumped elements}
-
 A lumped element is something very small compared to the line.  For L-section matching theory we are left to read \S 5.1 \citep{pozar2009microwave}.  The rough idea is that
 
 F3:A
 
 For (A) want
-
 \begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:180}
 Z_{\textrm{in}} = Z_0 = j X + \inv{ j B + \inv{Z_\txtL} }
 \end{equation}
@@ -108,7 +96,7 @@ F3:B
 For (B)
 
 \begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:200}
-Z_{\textrm{in}} = Z_0 = j X + \inv{ j B + \inv{R_\txtL + j X_\txtL} }
+Z_{\textrm{in}} = Z_0 = j X + \inv{ j B + \inv{R_\txtL + j X_\txtL} }.
 \end{equation}
 
 See: Smith chart slide S1.
@@ -116,12 +104,12 @@ See: Smith chart slide S1.
 Example: For a \( 100 \Omega \) line
 
 \begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:220}
-Z_\txtL = 200 -j 100 \Omega
+Z_\txtL = 200 -j 100 \Omega.
 \end{equation}
 
 Normalized is
 \begin{equation}\label{eqn:uwavesDeck6LCmatchingCore:240}
-Z_\txtL = 2 -j \Omega
+Z_\txtL = 2 -j \Omega.
 \end{equation}
 
 This is outside the \( 1 + j X \) circle.

@@ -4,35 +4,22 @@
 %
 \makeproblem{Lossless transmission line with load.}{uwaves:problemSet1:3}{
 \index{transmission!lossless loaded}
-
 A lossless transmission line of characteristic impedance \( Z_0 = 75 \Omega \) is terminated to an
 unknown complex impedance \( Z_\txtL \).  The transmission line is filled with air. The first
 voltage maximum is measured at a distance \( d = 9.7 \si{mm} \) from the load and the voltage
 standing-wave ratio on the line is measured to be \( \textrm{VSWR} = 2.33 \). The operating frequency
 is \( f = 3.0 \si{GHz} \).
-
 \makesubproblem{}{uwaves:problemSet1:3a}
-
 Determine the location of the first current minimum.
-
 \makesubproblem{}{uwaves:problemSet1:3b}
-
 What is the magnitude (amplitude) of the reflection coefficient \( \Abs{ \Gamma_\txtL } \).
-
 \makesubproblem{}{uwaves:problemSet1:3c}
-
 What is the phase of the reflection coefficient \( \Theta_\txtL \)?
-
 \makesubproblem{}{uwaves:problemSet1:3d}
-
 Determine the load \( Z_\txtL \).
-
 } % makeproblem
-
 \makeanswer{uwaves:problemSet1:3}{
-
 \makeSubAnswer{}{uwaves:problemSet1:3a}
-
 Because the current has a different sign in the superposition sum, the current min/max will be where there is a voltage max/min, so the first minimum is at \( d = 9.7 \si{mm} \).
 
 Showing this explicitly, the current amplitude is
@@ -51,15 +38,11 @@ The current minimum and maximums are respectively
 \Abs{I(-l)}_{\mathrm{max}} &= \Abs{ \frac{V_0^{+}}{Z_0} } \lr{ 1 + \Abs{\Gamma_\txtL} } \\
 \end{aligned}
 \end{equation}
-
 and occur when \( \Theta_\txtL - 2 \beta l = 2 \pi k \), and \( \Theta_\txtL - 2 \beta l = (2k - 1)\pi \) respectively.
 
 The first current minimum occurs when \( \Theta_\txtL = 2 \beta l \), which is exactly where the first voltage maximum also occurs.
-
 \makeSubAnswer{}{uwaves:problemSet1:3b}
-
 We have \( R = G = 0 \), so
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem3:20}
 Z_0 = \sqrt{\frac{L}{C}} = 75 \Omega.
 \end{equation}
@@ -70,7 +53,6 @@ v_\phi = c = \inv{\sqrt{L C}}.
 \end{equation}
 
 The VSWR is
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem3:60}
 \begin{aligned}
 V_{\textrm{SWR}}
@@ -81,17 +63,13 @@ V_{\textrm{SWR}}
 \\ &= 2.33,
 \end{aligned}
 \end{equation}
-
 so
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem3:80}
 1 + \Abs{\Gamma_\txtL}
 =
 \lr{1 - \Abs{\Gamma_\txtL}} V_{\textrm{SWR}}
 \end{equation}
-
 or
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem3:100}
 \begin{aligned}
 \Abs{\Gamma_\txtL}
@@ -102,23 +80,17 @@ or
 \\ &= 0.4 \,\Omega.
 \end{aligned}
 \end{equation}
-
 \makeSubAnswer{}{uwaves:problemSet1:3c}
-
 The absolute voltage at \( z = - l \) is
 
 \begin{equation}\label{eqn:uwavesproblemSet1Problem3:120}
 \Abs{V(-l)} = \Abs{V_0^{+}}\Abs{ 1 + \Abs{\Gamma_\txtL} e^{j(\Theta_\txtL - 2 \beta l)} },
 \end{equation}
-
 so the maximum was measured at
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem3:160}
 \Theta_\txtL - 2 \beta d = 2 \pi (0),
 \end{equation}
-
 or
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem3:140}
 \begin{aligned}
 \Theta_\txtL
@@ -131,15 +103,11 @@ or
 \end{equation}
 
 The reflection coefficient can now be written out explicitly
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem3:n}
 \Gamma_\L = 0.1377 + 0.3749 j \,\Omega.
 \end{equation}
-
 \makeSubAnswer{}{uwaves:problemSet1:3d}
-
 The load impedance is
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem3:220}
 \begin{aligned}
 Z_\txtL

@@ -2,27 +2,19 @@
 % Copyright © 2016 Peeter Joot.  All Rights Reserved.
 % Licenced as described in the file LICENSE under the root directory of this GIT repository.
 %
-
 \makeproblem{Find the Smith chart circle equations}{problem:uwavesDeck5SmithChartCore:1}{
 Prove \cref{eqn:uwavesDeck5SmithChartCore:440}.
 } % problem
-
 \makeanswer{problem:uwavesDeck5SmithChartCore:1}{
-
 We can write
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:460}
 (1 - \Gamma_r)^2 + \Gamma_i^2 = \frac{2 \Gamma_i }{\overbar{X}_\txtL},
 \end{equation}
-
 or
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:480}
 (1 - \Gamma_r)^2 + \lr{ \Gamma_i - \inv{\overbar{X}_\txtL} }^2 = \inv{\lr{\overbar{X}_\txtL}^2},
 \end{equation}
-
 which is one of the circular equations.  For the other, putting the \( \Gamma_r, \Gamma_i \) terms in the numerator, we have
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:500}
 \begin{aligned}
 \frac{1 - \Gamma_r^2  - \Gamma_i^2 }{\overbar{\Gamma}_\txtL}
@@ -32,7 +24,6 @@ which is one of the circular equations.  For the other, putting the \( \Gamma_r,
 1 - 2 \Gamma_r + \Gamma_r^2 + \Gamma_i^2,
 \end{aligned}
 \end{equation}
-
 or
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:520}
 \Gamma_r^2 \lr{ 1 + \inv{\overbar{\Gamma}_\txtL} } - 2 \Gamma_r + \Gamma_i^2 \lr{ 1 + \inv{\overbar{\Gamma}_\txtL} }
@@ -41,7 +32,6 @@ or
 \end{equation}
 
 Dividing through by \( 1 + \ifrac{1}{\overbar{\Gamma}_\txtL} = (\overbar{\Gamma}_\txtL + 1)/\overbar{\Gamma}_\txtL \), we have
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:540}
 \begin{aligned}
 \Gamma_r^2 - 2 \Gamma_r \frac{ \overbar{\Gamma}_\txtL }{\overbar{\Gamma}_\txtL + 1} + \Gamma_i^2
@@ -64,5 +54,4 @@ or
 \frac{ 1 }{\lr{\overbar{\Gamma}_\txtL + 1}^2}.
 \end{aligned}
 \end{equation}
-
 } % answer

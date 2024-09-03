@@ -4,48 +4,35 @@
 %
 \makeproblem{Parallel-plate transmission line.}{uwaves:problemSet1:4}{
 \index{transmission line!parallel plate}
-
 Consider a parallel-plate transmission line of height \( d \) and width \( w \) (\(w \gg d\)). The plates
 are filled with a lossless dielectric \( \epsilon \).
-
 \makesubproblem{}{uwaves:problemSet1:4a}
 Calculate the capacitance per unit length \( C' \).
-
 \makesubproblem{}{uwaves:problemSet1:4b}
 Calculate the inductance per unit length \( L' \).
-
 \makesubproblem{}{uwaves:problemSet1:4c}
 Determine an expression for the characteristic impedance \( Z_0 \).
-
 \makesubproblem{}{uwaves:problemSet1:4d}
 Calculate the resistance per unit length \( R' \). Assume that the conductivity of the plates is \( \sigma \)
 and the skin depth is \( \delta_s \).
-
 \makesubproblem{}{uwaves:problemSet1:4e}
 Calculate an expression for the attenuation constant \( \alpha \) in terms of \( d \).
-
 \makesubproblem{}{uwaves:problemSet1:4f}
 Now consider that \( d/w = 0.1 \) and \( \epsilon_r = 1 \).
 The plates have a conductivity of \( \sigma = 3.538 \times 10^7 \textrm{siemens}/m \).
 and the frequency of operation is \( f = 30 \si{GHz} \).
 
 Calculate the characteristic impedance \( Z_0 \).
-
 \makesubproblem{}{uwaves:problemSet1:4g}
 Calculate the attenuation constant \( \alpha \) numerically, and
 in \( \si{dB/m} \) when \( d = 1 \si{cm}, 1 \si{mm} \) and \( 1 \mu \si{m} \).
-
 } % makeproblem
-
 \makeanswer{uwaves:problemSet1:4}{
 \makeSubAnswer{}{uwaves:problemSet1:4a}
-
 To get some quick results, the transmission line can be treated as a large parallel plate capacitor.  First recall that for a single plate with linear charge density \( +(Q/l) \) on it, the electric field is normal and outwards from the plate as in sketched in \cref{fig:ps1p4:ps1p4Fig1}.
-
 \imageFigure{../figures/ece1236-microwaves/ps1p4Fig1}{Electric field between two plates}{fig:ps1p4:ps1p4Fig1}{0.2}
 
 Using a Gaussian volume the width of the plate we have
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:20}
 \begin{aligned}
 \int \BD \cdot \ncap dA
@@ -61,13 +48,11 @@ E = \frac{Q}{2 \epsilon w l}
 \end{equation}
 
 Introducing a second plate with equal but opposite charge density on it, we have cancelation of the electric field outside of the plates, but a doubling within.  The magnitude of the total electric field between the plates is therefore
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:60}
 \BE = -\frac{Q}{\epsilon w l} \ycap.
 \end{equation}
 
 The voltage difference between the plates is
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:80}
 \begin{aligned}
 V
@@ -77,7 +62,6 @@ V
 \end{equation}
 
 The capacitance per unit length is
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:100}
 \begin{aligned}
 C'
@@ -91,15 +75,10 @@ C' = \frac{\epsilon w}{d}.
 }
 
 Here edge effects and charge distribution on the plates has been completely ignored.  This is also only one of the possible field modes in the cavity (TEM mode).  This mode and the others are covered in greater detail in \citep{pozar2009microwave} ch. 3.
-
 \makeSubAnswer{}{uwaves:problemSet1:4b}
-
 For the magnetic field the situation is similar.  Suppose the magnetic field is oriented as sketched in \cref{fig:ps1p4:ps1p4Fig2}.
-
 \imageFigure{../figures/ece1236-microwaves/ps1p4Fig2}{Magnetic field and flux between two plates}{fig:ps1p4:ps1p4Fig2}{0.2}
-
 Integrating over the loop \( C \) that surrounds the top plate we have
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:140}
 \begin{aligned}
 \oint \BD \cdot d\Bl
@@ -107,20 +86,17 @@ Integrating over the loop \( C \) that surrounds the top plate we have
 2 H w \\ &= I,
 \end{aligned}
 \end{equation}
-
 or
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:160}
 H = \frac{I}{2w}.
 \end{equation}
 
 Like the electric field, an opposite charge on the other plate leads to a doubled magnetic field in the cavity, and no magnetic field outside the plates, so the total magnetic field magnitude in the cavity is
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:180}
 H = \frac{I}{w}.
 \end{equation}
 
 Calculating the flux through the side we have
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:200}
 \begin{aligned}
 \Phi
@@ -135,18 +111,13 @@ The inductance per unit length is
 L'
 = \frac{\Phi/l}{I},
 \end{equation}
-
 or
-
 \boxedEquation{eqn:uwavesproblemSet1Problem4:240}{
 L'
 = \frac{\mu d}{w}.
 }
-
 \makeSubAnswer{}{uwaves:problemSet1:4c}
-
 Assuming a low-loss condition, the impedance is
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:260}
 \begin{aligned}
 Z_0
@@ -157,39 +128,30 @@ Z_0
 \\ &= \frac{d}{w} \sqrt{ \frac{\mu}{\epsilon} },
 \end{aligned}
 \end{equation}
-
 or
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:280}
 Z_0
 = \frac{d}{w} \eta.
 \end{equation}
-
 \makeSubAnswer{}{uwaves:problemSet1:4d}
-
 Referring to \cref{fig:ps1p4:ps1p4Fig3}, the RF resistance can be to the effective area that the field acts on.
-
 \imageFigure{../figures/ece1236-microwaves/ps1p4Fig3}{Skin depth for parallel waveguide.}{fig:ps1p4:ps1p4Fig3}{0.15}
 
 The resistance per plate in a length \( l \) is
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:300}
 R = \frac{l}{\sigma A_{\mathrm{eff}}},
 \end{equation}
-
 so the total resistance per unit length is
 
 \boxedEquation{eqn:uwavesproblemSet1Problem4:320}{
 R' = \frac{2}{\sigma w \delta_s}.
 }
-
 \makeSubAnswer{}{uwaves:problemSet1:4e}
-
 %\begin{equation}\label{eqn:uwavesproblemSet1Problem4:340}
 %\alpha = \inv{\delta_s}.
 %\end{equation}
 % FIXME: reconsile this (below) with 340 above?
 Using the low-loss approximation, we have
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:360}
 \begin{aligned}
 \alpha
@@ -200,20 +162,15 @@ Using the low-loss approximation, we have
 \end{equation}
 
 The leading quantity is identified in \citep{pozar2009microwave} (1.125) as the surface resistance
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:380}
 R_\txts = \frac{1}{\sigma \delta_s} = \sqrt{\frac{\omega \mu}{2 \sigma}},
 \end{equation}
-
 so we can write
 \boxedEquation{eqn:uwavesproblemSet1Problem4:400}{
 \alpha = \frac{ R_\txts }{d \eta}.
 }
-
 \makeSubAnswer{}{uwaves:problemSet1:4f}
-
 At these values of \( d/w \) we have
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:420}
 Z_0 = 37.8 \Omega.
 \end{equation}
@@ -236,16 +193,14 @@ we have
 
 This by itself isn't a reasonable quantity to convert to \si{dB}, since it isn't a ratio of two quantities.  Asking about this, it turns out that the quantity of interest is the loss ratio
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:500}
-L \equiv e^{-2 \alpha}
+L \equiv e^{-2 \alpha}.
 \end{equation}
 
 This is of interest because the voltage is of the from
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:520}
 V = V_0 e^{-\alpha z} e^{-j \beta z},
 \end{equation}
-
 so the ratio of powers relative to the \( z = 0 \) power is
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:540}
 \begin{aligned}
 \frac{P}{P_0}
@@ -257,19 +212,15 @@ e^{-2 \alpha z}.
 \end{equation}
 
 The loss factor for one wavelength (something that could be expressed as \si{dB/m}) would be
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:560}
 e^{-2 \alpha \lambda},
 \end{equation}
-
 whereas the loss factor for one meter ( \( z = 1 \) ), is
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:580}
 L = e^{-2 \alpha }.
 \end{equation}
 
 In \si{dB} losses are
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:600}
 \begin{aligned}
 -10 \log_{10} L
@@ -280,10 +231,9 @@ In \si{dB} losses are
 \end{aligned}
 \end{equation}
 
-Note that the sign has been toggled to express the result as \si{dB} \underline{loss} (as opposed to \si{dB} \underline{gain}, where we'd normally want a positive sign)
+Note that the sign has been toggled to express the result as \si{dB} \underline{loss} (as opposed to \si{dB} \underline{gain}, where we'd normally want a positive sign.)
 
 This is really the quantity that was desired in this part of the problem.  That is
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:620}
 \begin{aligned}
 L(1 \,\si{cm}) &= 0.132988 \,\si{dB}/m \\
@@ -293,13 +243,10 @@ L(1 \mu \si{m}) &= 1329.88 \,\si{dB}/m.
 \end{equation}
 
 Should this loss factor have been desired in \si{Np/m} (Nepers per meter), the loss factor would be
-
 \begin{equation}\label{eqn:uwavesproblemSet1Problem4:640}
 \ln e^{-\alpha} = -\alpha,
 \end{equation}
-
 so the raw values of \( \alpha \), up to a sign, can be considered to be in ``Neper'' units.
-
 %
 %\begin{equation}\label{eqn:uwavesproblemSet1Problem4:480}
 %\begin{aligned}

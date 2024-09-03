@@ -5,7 +5,6 @@
 
 \section{Short circuited line}
 \index{short circuited line}
-
 A short circuited line, also called a shorted stub, is sketched in \cref{fig:deck5smithChartsAndImpedenceTx:deck5smithChartsAndImpedenceTxFig1}.
 
 \imageFigure{../figures/ece1236-microwaves/deck5smithChartsAndImpedenceTxFig1}{Short circuited line.}{fig:deck5smithChartsAndImpedenceTx:deck5smithChartsAndImpedenceTxFig1}{0.2}
@@ -14,13 +13,11 @@ With
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:20}
 Z_\txtL = 0,
 \end{equation}
-
 the input impedance is
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:40}
 Z_{\textrm{in}}
 = Z_0 \frac{ Z_\txtL + j Z_0 \tan(\beta l) }{ Z_0 + j Z_\txtL \tan(\beta l)}
-= j Z_0 \tan(\beta l)
+= j Z_0 \tan(\beta l).
 \end{equation}
 
 %At the load
@@ -36,16 +33,14 @@ Z_{\textrm{in}}
 %so
 
 For short line sections \( \beta l \ll \pi/2 \), or \( l \ll \lambda/4 \), the input impedance is approximately
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:80}
 Z_{\textrm{in}}
 = j Z_0 \tan(\beta l)
 \approx j Z_0 \sin(\beta l)
-\approx j Z_0 \beta l
+\approx j Z_0 \beta l.
 \end{equation}
 
 Introducing an equivalent inductance defined by \( Z_{\textrm{in}} = j \omega L_{\mathrm{eq}} \), we have
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:100}
 \begin{aligned}
 L_{\mathrm{eq}}
@@ -64,13 +59,11 @@ This is also the case for short sections of high impedance line.
 
 \section{Open circuited line}
 \index{open circuited line}
-
 An open circuited line is sketched in \cref{fig:deck5smithChartsAndImpedenceTx:deck5smithChartsAndImpedenceTxFig2}.
 
 \imageFigure{../figures/ece1236-microwaves/deck5smithChartsAndImpedenceTxFig2}{Open circuited line.}{fig:deck5smithChartsAndImpedenceTx:deck5smithChartsAndImpedenceTxFig2}{0.2}
 
 This time with \( Z_\txtL \rightarrow \infty \) we have
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:120}
 \begin{aligned}
 Z_{\textrm{in}}
@@ -80,7 +73,6 @@ Z_{\textrm{in}}
 \end{equation}
 
 This time we have an equivalent capacitance.  For short sections with \( \beta l \ll \pi/2 \)
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:140}
 Z_{\textrm{in}}
 \approx
@@ -88,7 +80,6 @@ Z_{\textrm{in}}
 \end{equation}
 
 Introducing an equivalent capacitance defined by \( Z_{\textrm{in}} = 1/(j \omega C_{\mathrm{eq}}) \), we have
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:160}
 \begin{aligned}
 C_{\mathrm{eq}}
@@ -97,7 +88,7 @@ C_{\mathrm{eq}}
 \\ &=
 \frac{ \omega/v_\phi l}{\omega Z_0}
 \\ &=
-\frac{ l}{v_\phi Z_0}
+\frac{ l}{v_\phi Z_0}.
 \end{aligned}
 \end{equation}
 
@@ -107,13 +98,11 @@ This is also the case for short sections of low impedance line.
 
 \section{Half wavelength transformer.}
 \index{half wavelength transformer}
-
 A half wavelength transmission line equivalent circuit is sketched in \cref{fig:deck5smithChartsAndImpedenceTx:deck5smithChartsAndImpedenceTxFig3}.
 
 \imageFigure{../figures/ece1236-microwaves/deck5smithChartsAndImpedenceTxFig3}{Half wavelength transmission line.}{fig:deck5smithChartsAndImpedenceTx:deck5smithChartsAndImpedenceTxFig3}{0.2}
 
 With \( l = \lambda/2 \)
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:180}
 \begin{aligned}
 \beta l
@@ -123,7 +112,6 @@ With \( l = \lambda/2 \)
 \end{equation}
 
 Since \( \tan \pi = 0 \), the input impedance is
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:200}
 \begin{aligned}
 Z_{\textrm{in}}
@@ -140,7 +128,6 @@ A quarter wavelength transmission line equivalent circuit is sketched in \cref{f
 \imageFigure{../figures/ece1236-microwaves/deck5smithChartsAndImpedenceTxFig4}{Quarter wavelength transmission line.}{fig:deck5smithChartsAndImpedenceTx:deck5smithChartsAndImpedenceTxFig4}{0.2}
 
 With \( l = \lambda/4 \)
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:220}
 \begin{aligned}
 \beta l
@@ -150,7 +137,6 @@ With \( l = \lambda/4 \)
 \end{equation}
 
 We have \( \tan \beta l \rightarrow \infty \), so the input impedance is
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:240}
 \begin{aligned}
 Z_{\textrm{in}}
@@ -160,7 +146,6 @@ Z_{\textrm{in}}
 \end{equation}
 
 This relation
-
 %\begin{equation}\label{eqn:uwavesDeck5SmithChartCore:280}
 \boxedEquation{eqn:uwavesDeck5SmithChartCore:280}
 {
@@ -168,7 +153,6 @@ Z_{\textrm{in}}
 = \frac{Z_0^2}{Z_\txtL},
 }
 %\end{equation}
-
 is called the \textAndIndex{impedance inverter}.
 
 \begin{itemize}
@@ -191,42 +175,31 @@ Matching for a quarter wavelength transmission line equivalent circuit is sketch
 %\imageFigure{../figures/ece1236-microwaves/deck5smithChartsAndImpedenceTxFig6}{CAPTION: deck5smithChartsAndImpedenceTxFig6}{fig:deck5smithChartsAndImpedenceTx:deck5smithChartsAndImpedenceTxFig6}{0.2}
 
 For maximum power transfer
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:300}
 Z_{\textrm{in}} = \frac{Z_0^2}{R_\txtL} = R_\txtG,
 \end{equation}
-
 so
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:320}
 Z_0 = \sqrt{ R_\txtG R_\txtL }.
 \end{equation}
 
 We have
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:340}
 \Abs{\Gamma_\txtL} = \frac{ R_\txtL - Z_0 }{R_\txtL + Z_0} \ne 0,
 \end{equation}
-
 and still maximum power is transferred.
 
 \section{Smith chart}
 \index{Smith chart}
-
 A Smith chart is a graphical tool for making the transformation \( \Gamma \leftrightarrow Z_{\textrm{in}} \).  Given
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:360}
 Z_{\textrm{in}} = Z_0 \frac{ 1 + \Gamma }{ 1 - \Gamma },
 \end{equation}
-
 where \( \Gamma = \Gamma_\txtL e^{- 2 j \beta l } \), we begin by normalizing the input impedance, using an overbar to denote that normalization
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:380}
 Z_{\textrm{in}} \rightarrow \overbar{Z}_{\textrm{in}} = \frac{Z_{\textrm{in}}}{Z_0},
 \end{equation}
-
 so
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:400}
 \begin{aligned}
 \overbar{Z}_{\textrm{in}}
@@ -239,7 +212,6 @@ so
 \end{equation}
 
 If we let \( \overbar{Z}_{\textrm{in}} = \overbar{\Gamma}_\txtL + j \overbar{X}_\txtL \), and equate real and imaginary parts we have
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:420}
 \begin{aligned}
 \overbar{\Gamma}_\txtL &= \frac{ 1 - \Abs{\Gamma}^2 }{ (1 - \Gamma_r)^2 + \Gamma_i^2 } \\
@@ -248,25 +220,19 @@ If we let \( \overbar{Z}_{\textrm{in}} = \overbar{\Gamma}_\txtL + j \overbar{X}_
 \end{equation}
 
 It is left as an exercise to demonstrate that these can be rearranged into
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:440}
 \begin{aligned}
 \lr{ \Gamma_r - \frac{\overbar{\Gamma}_\txtL}{1 + \overbar{\Gamma}_\txtL } }^2 + \Gamma_i^2 &= \lr{ \inv{1 + \overbar{\Gamma}_\txtL }}^2 \\
 \lr{ \Gamma_r - 1 }^2 + \lr{ \Gamma_i - \inv{\overbar{X}_\txtL } }^2 &= \inv{\overbar{X}_\txtL^2},
 \end{aligned}
 \end{equation}
-
 which trace out circles in the \( \Gamma_r, \Gamma_i \) plane, one for the real part of \( \Gamma \) and one for the imaginary part.  This provides a graphical way for implementing the impedance transformation.
-
 \paragraph{Real impedance circle}
 \index{Smith chart!real impedance circle}
-
 The circle for the real part is centered at
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:580}
 \lr{ \frac{\overbar{\Gamma}_\txtL}{1 + \overbar{\Gamma}_\txtL }, 0 },
 \end{equation}
-
 with radius
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:600}
 \inv{1 + \overbar{\Gamma}_\txtL }.
@@ -288,21 +254,16 @@ For matched loads where \( \overbar{\Gamma}_\txtL = 1 \) the circle is centered 
 
 \paragraph{Imaginary impedance circle}
 \index{Smith chart!imaginary impedance circle}
-
 The circle obtained by equating imaginary parts are constant reactance circles with center
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:640}
 \lr{ 1, \inv{\overbar{X}_\txtL } },
 \end{equation}
-
 with radius
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:660}
 \inv{\overbar{X}_\txtL}.
 \end{equation}
 
 These circles also pass through the point \( (1,0) \).  These circles are orthogonal to the constant resistance circles.  Some of the features of a Smith chart are sketched in \cref{fig:deck5smithChartsAndImpedenceTx:deck5smithChartsAndImpedenceTxFig7}.
-
 \imageFigure{../figures/ece1236-microwaves/deck5smithChartsAndImpedenceTxFig7}{Hand sketched Smith chart.}{fig:deck5smithChartsAndImpedenceTx:deck5smithChartsAndImpedenceTxFig7}{0.4}
 
 A matlab produced blank Smith chart can be found in \cref{fig:smithchart:smithchartFig1}.
@@ -315,43 +276,33 @@ A matlab produced blank Smith chart can be found in \cref{fig:smithchart:smithch
 \imageFigure{../figures/ece1236-microwaves/deck5smithChartsAndImpedenceTxFig8}{Impedance transformation along lossless line.}{fig:deck5smithChartsAndImpedenceTx:deck5smithChartsAndImpedenceTxFig8}{0.2}
 
 Given
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:700}
-\overbar{Z} = \frac{1 + \Gamma}{1 - \Gamma},
+\overbar{Z} = \frac{1 + \Gamma}{1 - \Gamma}
 \end{equation}
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:720}
 \Gamma = \Gamma_\txtL e^{-2 j \beta l},
 \end{equation}
-
 and
-
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:740}
-\Gamma_\txtL = \Abs{\Gamma_\txtL} e^{j \Theta_\txtL }
+\Gamma_\txtL = \Abs{\Gamma_\txtL} e^{j \Theta_\txtL },
 \end{equation}
-
-The total reflection coefficient is
-
+the total reflection coefficient is
 \begin{equation}\label{eqn:uwavesDeck5SmithChartCore:760}
-\Gamma = \Abs{\Gamma_\txtL} e^{j (\Theta_\txtL - 2 \beta l) }
+\Gamma = \Abs{\Gamma_\txtL} e^{j (\Theta_\txtL - 2 \beta l) }.
 \end{equation}
 
 If \( \Gamma_\txtL = \Abs{\Gamma_\txtL} e^{j \Theta_\txtL } \) is plotted on the Smith chart, then in order to move towards the generator, a subtraction from \( \Theta_\txtL \) of \( 2 \beta l \) is required.
 
 Some worked examples that demonstrate this can be found in \cref{fig:smithChartSlides:smithChartSlidesFig1}, \cref{fig:smithChartSlides:smithChartSlidesFig2}, and \cref{fig:smithChartSlides:smithChartSlidesFig3}.
-
 \imageFigure{../figures/ece1236-microwaves/smithChartSlidesFig1}{Mapping an impedance value onto a Smith chart.}{fig:smithChartSlides:smithChartSlidesFig1}{0.5}
 \imageFigure{../figures/ece1236-microwaves/smithChartSlidesFig2}{Moving on the Smith chart towards the generator.}{fig:smithChartSlides:smithChartSlidesFig2}{0.5}
 \imageFigure{../figures/ece1236-microwaves/smithChartSlidesFig3}{Moving on the Smith chart.}{fig:smithChartSlides:smithChartSlidesFig3}{0.5}
-
 %The class slides do this for a few loads.
 } % example
 
 \paragraph{Single stub tuning.}
 \index{single stub tuning}
-
 Referring to \cref{fig:smithChartSlides:smithChartSlidesFig4}, the procedure for single stub tuning is
-
 \imageFigure{../figures/ece1236-microwaves/smithChartSlidesFig4}{Single stub tuning example}{fig:smithChartSlides:smithChartSlidesFig4}{0.5}
 
 \begin{enumerate}
@@ -370,8 +321,6 @@ Notes:
 \item In step (3) there are two points where the R=1 circle is intersected . Usually we chose the shortest one
 \item By adding multiples of half-wavelength lengths to either \(d\) or \(l\) an infinite number of solutions can be constructed.
 \end{enumerate}
-
-
 %%%\section{Feb 3}
 %%%
 %%%F1

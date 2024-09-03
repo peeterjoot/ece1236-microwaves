@@ -5,7 +5,6 @@
 %{
 \section{Continuum transformer}
 \index{impedance matching}
-
 A non-discrete impedance matching transformation, as sketched in \cref{fig:taperedLines:taperedLinesFig1}, is also possible.
 
 \imageFigure{../figures/ece1236-microwaves/taperedLinesFig1}{Tapered impedance matching.}{fig:taperedLines:taperedLinesFig1}{0.2}
@@ -34,7 +33,7 @@ Hence as we did for multisection transformers, associate \( \Delta \Gamma \) wit
 
 \imageFigure{../figures/ece1236-microwaves/taperedLinesFig2}{Reflection coefficient over an interval}{fig:taperedLines:taperedLinesFig2}{0.15}
 
-assuming small reflections (i.e. \( Z(z) \) is a slowly varying (adiabatic).  Then
+Assuming small reflections (i.e. \( Z(z) \) is a slowly varying (adiabatic).  Then
 
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:920}
 \begin{aligned}
@@ -49,12 +48,10 @@ This supplies the means to calculate the reflection coefficient for any impedanc
 
 \section{Exponential taper}
 \index{exponential taper}
-
 Let
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:620}
-Z(z) = Z_0 e^{a z}, \qquad 0 < z < L
+Z(z) = Z_0 e^{a z}, \qquad 0 < z < L,
 \end{equation}
-
 subject to
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:640}
 \begin{aligned}
@@ -62,28 +59,23 @@ Z(0) &= Z_0 \\
 Z(L) &= Z_0 e^{a L} = Z_\txtL,
 \end{aligned}
 \end{equation}
-
 which gives
-
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:660}
 \ln \frac{Z_\txtL}{Z_0} = a L,
 \end{equation}
-
 or
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:680}
-a = \inv{L} \ln \frac{Z_\txtL}{Z_0}
+a = \inv{L} \ln \frac{Z_\txtL}{Z_0}.
 \end{equation}
 
 Also
-
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:700}
 \frac{d}{dz} \ln \frac{Z_\txtL}{Z_0}
 = \frac{d}{dz} (az)
-= a,
+= a.
 \end{equation}
 
 Hence
-
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:740}
 \begin{aligned}
 \Gamma(\omega)
@@ -97,9 +89,7 @@ Hence
 \\ &= \frac{1}{2} \ln \frac{Z_\txtL}{Z_0} e^{-j \beta L} \frac{\sin( \beta L )}{\beta L},
 \end{aligned}
 \end{equation}
-
 or
-
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:940}
 \Gamma(\omega) = \frac{1}{2} \ln \frac{Z_\txtL}{Z_0} e^{-j \beta L} \sinc( \beta L ).
 \end{equation}
@@ -111,29 +101,22 @@ or
 \end{enumerate}
 
 This is sketched in \cref{fig:taperedLines:taperedLinesFig3}.
-
 \imageFigure{../figures/ece1236-microwaves/taperedLinesFig3}{Exponential taper reflection coefficient.}{fig:taperedLines:taperedLinesFig3}{0.2}
 
 Want:
-
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:760}
 \beta L = \pi,
 \end{equation}
-
 or
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:780}
-\frac{\omega_c}{v_\phi} L = \pi
+\frac{\omega_c}{v_\phi} L = \pi,
 \end{equation}
-
 where \( \omega_c \) is the cutoff frequency.  This gives
-
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:800}
 \omega_c = \frac{\pi v_\phi}{L}.
 \end{equation}
-
 \paragraph{Triangular Taper}
 \index{triangular taper}
-
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:960}
 Z(z) =
 \left\{
@@ -155,28 +138,22 @@ Z_0 e^{(4z/L - 2 z^2 - 1) \ln(Z_\txtL/Z_0)} & \quad \mbox{\( L/2 \le z \le L\)} 
 \end{equation}
 
 In this case
-
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:1000}
 \Gamma(\omega) = \frac{1}{2} e^{-\beta L} \ln \frac{Z_\txtL}{Z_0} e^{-j \beta L} \sinc^2( \beta L/2 ).
 \end{equation}
 
 Compared to the exponential taper \( \sinc( \beta L ) \) for the \( \beta L > 2 \pi \) the peaks of \( \Abs{\Gamma} \) are lower, but the first null occurs at \( \beta L = 2 \pi \) whereas for the exponential taper it occurs at \( \beta L = \pi \).  This is sketched in \cref{fig:taperedLines:taperedLinesFig4}.  The price to pay for this is that the zero is at \( 2 \pi \) so we have to make it twice as long to get the ripple down.
-
 \imageFigure{../figures/ece1236-microwaves/taperedLinesFig4}{Triangular taper impedance curve.}{fig:taperedLines:taperedLinesFig4}{0.2}
 
 \paragraph{Klopfenstein Taper}
 \index{Klopfenstein taper}
-
 For a given taper length \( L \), the Klopfenstein taper is optimum in the sense that the reflection coefficient in the passband is minimum.  Alternatively, for a given minimum reflection coefficient in the passband, the Klopfenstein taper yields the shortest length \( L \).
 
 Definition:
-
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:1020}
 \ln Z = \inv{2} \ln (Z_0 Z_\txtL) + \frac{\Gamma_0}{\cosh A} A^2 \phi(2 z/L -1, A), \qquad 0 \le z \le L,
 \end{equation}
-
 where
-
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:1040}
 \phi(x, A) = \int_0^x \frac{I_1(A\sqrt{1 - y^2})}{A \sqrt{1 - y^2}} dy, \qquad \Abs{x} \le 1.
 \end{equation}
@@ -191,7 +168,6 @@ Here \( I_1(x) \) is the modified Bessel function.  Note that
 \end{equation}
 
 The resulting reflection coefficient is
-
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:1080}
 \Gamma(\omega)
 =
@@ -202,26 +178,19 @@ The resulting reflection coefficient is
 \end{array}
 \right.,
 \end{equation}
-
 where as usual
-
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:1100}
 \Gamma_0 = \frac{Z_\txtL - Z_0}{Z_\txtL + Z_0} \approx \inv{2} \ln (Z_\txtL/Z_0).
 \end{equation}
 
 The passband is defined by \( \beta L \ge A \) and the maximum ripple in the passband is
-
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:1120}
 \Gamma_m = \frac{\Gamma_0}{\cosh A}.
 \end{equation}
-
 \makeexample{Triangular taper vs. exponential taper vs. Klopfenstein taper.}{example:continuumAndOtherTransformersCore:1}{
-
 Design a triangular taper, an exponential taper, and a Klopfenstein taper (with \( \Gamma_m = 0.02 \) ) to match a \( 50 \Omega \) load to a \( 100 \Omega \) line.
-
 \begin{itemize}
 \item Triangular taper:
-
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:1140}
 Z(z) =
 \left\{
@@ -233,21 +202,17 @@ Z_0 e^{ (4 z/L - 2 z^2/L^2 - 1)\ln Z_\txtL/Z_0 } & \quad \mbox{\( L/2 \ge z \ge 
 \end{equation}
 
 The resulting \( \Gamma \) is
-
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:1160}
 \Abs{\Gamma} = \inv{2} \ln (Z_\txtL/Z_0) \sinc^2\lr{ \beta L/2 }.
 \end{equation}
-
 \item Exponential taper:
-
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:1180}
 \begin{aligned}
 Z(z) &= Z_0 e^{a z}, \qquad 0 \le z \le L \\
 a &= \inv{L} \ln (Z_\txtL/Z_0) = \frac{0.693}{L} \\
-\Abs{\Gamma} &= \inv{2} \ln (Z_\txtL/Z_0) \sinc( \beta L )
+\Abs{\Gamma} &= \inv{2} \ln (Z_\txtL/Z_0) \sinc( \beta L ).
 \end{aligned}
 \end{equation}
-
 \item Klopfenstein taper:
 \index{Klopfenstein taper}
 \begin{equation}\label{eqn:continuumAndOtherTransformersCore:1200}
@@ -259,11 +224,9 @@ A &= \cosh^{-1}\lr{ \frac{\Gamma_0}{\Gamma_m}} =  \cosh^{-1}\lr{ \frac{0.346}{0.
 \end{equation}
 
 The passband \( \beta L > A  = 3.543 = 1.13 \pi \).  The impedance \( Z(z) \) must be evaluated numerically.
-
 \end{itemize}
 
 To illustrate some of the differences, we are referred to fig. 5.21 \citep{pozar2009microwave}.  It is noted that
-
 \begin{enumerate}
 \item The exponential taper has the lowest cutoff frequency \( \beta L = \pi \).  Then is the Klopfenstein taper which is close \( \beta L = 1.13 \pi \).  Last is the triangular with \( \beta L = 2 \pi \).
 \item The Klopfenstein taper has the lowest \( \Abs{\Gamma} \) in the passband and meets the spec of \( \Gamma_m = 0.02 \).  The worst \( \Abs{\Gamma} \) in the passband is from the exponential taper and the triangular ripple is between the two others.
